@@ -1,0 +1,7 @@
+{
+  "basis": "Both adapters score100% on all50 synthetic validation documents; v1 has marginally lower validation completion loss and uses the smaller training dataset. v2 is retained as an ablation.",
+  "policy": "No training or prompt adjustments after the final test protocol started. Test scores are reporting evidence, not a tuning set.",
+  "primary_learning_adapter": "v1",
+  "v1_validation_loss": 2.8238710001460277e-05,
+  "v2_validation_loss": 2.980904173455201e-05
+}

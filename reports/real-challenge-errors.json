@@ -1,0 +1,93 @@
+{
+  "errors": [
+    {
+      "error": "Expecting value: line 1 column 1 (char 0)",
+      "id": "aleasebert-237",
+      "run": "real-baseline",
+      "type": "invalid-schema"
+    },
+    {
+      "error": "Expecting value: line 1 column 1 (char 0)",
+      "id": "aleasebert-73",
+      "run": "real-baseline",
+      "type": "invalid-schema"
+    },
+    {
+      "expected": "2012-10-01",
+      "field": "commencement_date",
+      "id": "aleasebert-237",
+      "prediction": null,
+      "run": "real-v1"
+    },
+    {
+      "expected": "2017-12-31",
+      "field": "expiration_date",
+      "id": "aleasebert-237",
+      "prediction": null,
+      "run": "real-v1"
+    },
+    {
+      "expected": "Big Tree International Co., Ltd.",
+      "field": "tenant",
+      "id": "aleasebert-237",
+      "prediction": "Big Tree International Co., Ltd",
+      "run": "real-v1"
+    },
+    {
+      "expected": "2011-03-01",
+      "field": "commencement_date",
+      "id": "aleasebert-73",
+      "prediction": null,
+      "run": "real-v1"
+    },
+    {
+      "expected": "2014-02-28",
+      "field": "expiration_date",
+      "id": "aleasebert-73",
+      "prediction": null,
+      "run": "real-v1"
+    },
+    {
+      "expected": "XU Shiyong",
+      "field": "landlord",
+      "id": "aleasebert-73",
+      "prediction": "Xingguo General Fruit Industry Development Co., Ltd",
+      "run": "real-v1"
+    },
+    {
+      "expected": "Xingguo General Fruit Industry Development Co., Ltd.",
+      "field": "tenant",
+      "id": "aleasebert-73",
+      "prediction": "XU Shiyong",
+      "run": "real-v1"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "aleasebert-73",
+      "prediction": "CNY",
+      "run": "real-v1"
+    },
+    {
+      "expected": "2012-10-01",
+      "field": "commencement_date",
+      "id": "aleasebert-237",
+      "prediction": null,
+      "run": "real-v2"
+    },
+    {
+      "expected": "Big Tree International Co., Ltd.",
+      "field": "tenant",
+      "id": "aleasebert-237",
+      "prediction": "Big Tree International Co., Ltd",
+      "run": "real-v2"
+    },
+    {
+      "error": "Extra data: line 3 column 1 (char 71)",
+      "id": "aleasebert-73",
+      "run": "real-v2",
+      "type": "invalid-schema"
+    }
+  ],
+  "scope": "Two qualitative external examples; strict string matching, not a general accuracy estimate. Source materials retain their separate CC-BY-NC-4.0 license."
+}

@@ -1,0 +1,24 @@
+{
+  "documents": 50,
+  "exact_document_accuracy": 0.58,
+  "field_accuracy": 0.6325,
+  "invalid_prediction_count": 18,
+  "median_seconds": 2.3166218750047847,
+  "nonnull_field_accuracy": 0.6318681318681318,
+  "peak_memory_gb": 3.8381037,
+  "per_field_accuracy": {
+    "base_rent.amount": 0.64,
+    "base_rent.currency": 0.64,
+    "base_rent.period": 0.64,
+    "commencement_date": 0.58,
+    "expiration_date": 0.64,
+    "landlord": 0.64,
+    "premises_address": 0.64,
+    "tenant": 0.64
+  },
+  "schema_validity": 0.64,
+  "total_seconds": 144.93950141400273,
+  "unsupported_value_count": 3,
+  "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+  "unsupported_value_rate": 0.012875536480686695
+}

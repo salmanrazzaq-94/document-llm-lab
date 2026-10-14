@@ -124,6 +124,9 @@ uv run ruff format --check src tests
 Unit tests run on Linux without MLX. Actual model inference/training requires Apple Silicon;
 the local experiments exercise that path. CI runs tests and lint, never GPU training.
 Results and model-card limitations are published under [reports/](reports/).
+The first runs reached 100% (v1) and 99.5% (v2) synthetic test field accuracy, but regressed
+against the format-normalized baseline on the two real leases. See [the results](reports/RESULTS.md)
+for the distinction between output-format compliance and factual extraction.
 Adapters are published as release assets, rather than embedding base-model weights in Git.
 Extract an adapter archive at the repository root, then pass its `best/` directory to `--adapter`.
 The base model is downloaded separately at its pinned revision.

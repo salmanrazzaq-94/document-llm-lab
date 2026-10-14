@@ -3,6 +3,10 @@
 Work through one lesson at a time. Before running each command, predict what will happen.
 Afterward, open the saved JSON and explain any difference between your prediction and the result.
 
+MLX lets us use your Mac's GPU locally. Tokens, loss, gradients, optimization, LoRA, and evaluation
+transfer to PyTorch and Hugging Face TRL, but the training APIs and saved adapter format differ.
+Keep that distinction clear when explaining this project in an interview.
+
 ## 1. Inference before training
 
 Run the README's first extraction command. Compare its JSON with the sample PDF.

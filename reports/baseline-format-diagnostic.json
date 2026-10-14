@@ -1,0 +1,28 @@
+{
+  "diagnostic_metrics": {
+    "documents": 50,
+    "exact_document_accuracy": 0.88,
+    "field_accuracy": 0.9675,
+    "invalid_prediction_count": 1,
+    "median_seconds": 2.3166218750047847,
+    "nonnull_field_accuracy": 0.9917582417582418,
+    "peak_memory_gb": 3.8381037,
+    "per_field_accuracy": {
+      "base_rent.amount": 0.98,
+      "base_rent.currency": 0.98,
+      "base_rent.period": 0.98,
+      "commencement_date": 0.88,
+      "expiration_date": 0.98,
+      "landlord": 0.98,
+      "premises_address": 0.98,
+      "tenant": 0.98
+    },
+    "schema_validity": 0.98,
+    "total_seconds": 144.93950141400273,
+    "unsupported_value_count": 5,
+    "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+    "unsupported_value_rate": 0.01366120218579235
+  },
+  "markdown_wrapped_documents": 17,
+  "protocol": "Post-hoc diagnostic only: remove a single enclosing Markdown JSON fence; no edits to values, no repair of malformed JSON. Primary frozen metrics still use raw output."
+}

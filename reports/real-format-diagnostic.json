@@ -1,0 +1,28 @@
+{
+  "metrics": {
+    "documents": 2,
+    "exact_document_accuracy": 0.0,
+    "field_accuracy": 0.75,
+    "invalid_prediction_count": 0,
+    "median_seconds": 9.677904333504557,
+    "nonnull_field_accuracy": 0.8,
+    "peak_memory_gb": 4.017871096,
+    "per_field_accuracy": {
+      "base_rent.amount": 1.0,
+      "base_rent.currency": 0.5,
+      "base_rent.period": 1.0,
+      "commencement_date": 1.0,
+      "expiration_date": 1.0,
+      "landlord": 0.0,
+      "premises_address": 1.0,
+      "tenant": 0.5
+    },
+    "schema_validity": 1.0,
+    "total_seconds": 19.355808667009114,
+    "unsupported_value_count": 4,
+    "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+    "unsupported_value_rate": 0.25
+  },
+  "protocol": "Post-hoc diagnostic only: strip one enclosing Markdown JSON fence; do not alter values or repair schema. Not used for training or model selection.",
+  "source_license": "CC-BY-NC-4.0; see data/real/benchmark/LICENSE.txt"
+}

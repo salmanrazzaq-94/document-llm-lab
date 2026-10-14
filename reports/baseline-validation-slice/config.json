@@ -1,0 +1,26 @@
+{
+  "adapter": null,
+  "dataset_version": "b4ab62189959686054b6d31469db1473c26eeee049119035c41a6a5d7ddd9abb",
+  "generation": {
+    "enable_thinking": false,
+    "max_tokens": 384,
+    "temperature": 0.0
+  },
+  "ids": [
+    "valid-f08-000",
+    "valid-f08-001",
+    "valid-f08-002",
+    "valid-f08-003",
+    "valid-f08-004",
+    "valid-f08-005",
+    "valid-f08-006",
+    "valid-f08-007",
+    "valid-f08-008",
+    "valid-f08-009"
+  ],
+  "limit": 10,
+  "model": "Qwen/Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "prompt_hash": "de252e0ed05af6f88fd6c6c45666ab46b179215e696979206cf7f771bb1252d0",
+  "split": "valid"
+}

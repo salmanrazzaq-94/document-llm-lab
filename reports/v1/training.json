@@ -1,0 +1,56 @@
+{
+  "best_checkpoint": {
+    "iteration": 199,
+    "type": "validation",
+    "val_loss": 2.8238710001460277e-05,
+    "val_time": 16.929359708010452
+  },
+  "checkpoint_selection": "minimum full-validation completion loss; includes step-zero baseline",
+  "dataset_version": "b4ab62189959686054b6d31469db1473c26eeee049119035c41a6a5d7ddd9abb",
+  "model": "Qwen/Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "peak_memory_gb": 4.43116852,
+  "seconds": 300.04939025000203,
+  "settings": {
+    "adapter_path": "artifacts/v1/last",
+    "batch_size": 1,
+    "clear_cache_threshold": 0,
+    "config": null,
+    "data": "data/generated/v1",
+    "fine_tune_type": "lora",
+    "grad_accumulation_steps": 1,
+    "grad_checkpoint": true,
+    "iters": 200,
+    "learning_rate": 0.0001,
+    "lora_parameters": {
+      "dropout": 0.0,
+      "rank": 8,
+      "scale": 20.0
+    },
+    "lr_schedule": null,
+    "mask_prompt": true,
+    "max_seq_length": 2048,
+    "model": "Qwen/Qwen3-1.7B",
+    "num_layers": 8,
+    "optimizer": "adam",
+    "optimizer_config": {
+      "adafactor": {},
+      "adam": {},
+      "adamw": {},
+      "muon": {},
+      "sgd": {}
+    },
+    "project_name": null,
+    "report_to": null,
+    "resume_adapter_file": null,
+    "save_every": 20,
+    "seed": 42,
+    "steps_per_eval": 20,
+    "steps_per_report": 10,
+    "test": false,
+    "test_batches": 500,
+    "train": true,
+    "trust_remote_code": false,
+    "val_batches": -1
+  }
+}
