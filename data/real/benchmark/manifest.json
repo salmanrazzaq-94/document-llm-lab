@@ -1,0 +1,12 @@
+{
+  "archive_sha256": "eefd69346fda26223ade30c1d4eb2f8ad7088b03ea2660d56d6b6582da909250",
+  "attribution": "Spyretta Leivaditi, Julien Rossi, Evangelos Kanoulas. A Benchmark for Lease Contract Review (2020); ALeaseBert dataset (2022). DOI: 10.21942/uva.19732993.v1",
+  "counts": {
+    "test": 2
+  },
+  "license": "CC-BY-NC-4.0",
+  "license_source": "https://uvaauas.figshare.com/articles/dataset/ALeaseBert/19732993",
+  "scope": "Two real lease texts rendered as new PDFs. Tiny qualitative challenge set, not a representative benchmark. Evaluation only; excluded from all training.",
+  "source": "https://uvaauas.figshare.com/articles/dataset/ALeaseBert/19732993",
+  "version": "4c146820016398fce6a8acb4810f685f5e683dd601bfff94dc4876308297f526"
+}

@@ -1,0 +1,16 @@
+{
+  "changed": "104 additional training-only examples; 304 training documents total",
+  "controlled": [
+    "base model revision",
+    "prompt",
+    "LoRA rank and layers",
+    "learning rate",
+    "steps",
+    "seed",
+    "validation and test examples",
+    "generation settings"
+  ],
+  "evidence": "Baseline validation slice had one unsupported commencement-date prediction. v1 now has perfect accuracy on the full synthetic validation set, so v2 is a data ablation, not an expected synthetic-score improvement.",
+  "hypothesis": "Additional training-only missing-rent and ambiguous-date examples reinforce abstention.",
+  "selection": "Each adapter uses minimum full-validation completion loss. No synthetic or real test predictions have been read to design v2."
+}

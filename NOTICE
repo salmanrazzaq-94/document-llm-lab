@@ -1,0 +1,11 @@
+Document LLM Lab
+Copyright 2026 Salman Razzaq
+
+Code and original synthetic lease fixtures are provided under Apache-2.0.
+Qwen3-1.7B is developed by the Qwen team and provided under Apache-2.0.
+Base model: https://huggingface.co/Qwen/Qwen3-1.7B
+MLX LM: https://github.com/ml-explore/mlx-lm (MIT)
+
+External ALeaseBert evaluation documents retain their separate CC BY-NC 4.0
+terms. See data/real/benchmark/LICENSE.txt and its manifest for attribution.
+They are excluded from adapter training and from the Apache-2.0 data grant.

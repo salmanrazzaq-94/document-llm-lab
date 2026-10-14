@@ -1,0 +1,50 @@
+{
+  "cases": [
+    {
+      "expected": {
+        "base_rent": null,
+        "commencement_date": null,
+        "expiration_date": null,
+        "landlord": "Harbor Properties 00 Ltd",
+        "premises_address": "769 Market Street, Suite 1, Example City",
+        "tenant": "Juniper Studio 00 LLC"
+      },
+      "id": "train-f00-000",
+      "result": "explicit terms and null labels match PDF text"
+    },
+    {
+      "expected": {
+        "base_rent": {
+          "amount": 6721,
+          "currency": "EUR",
+          "period": "year"
+        },
+        "commencement_date": "2026-08-12",
+        "expiration_date": "2029-08-12",
+        "landlord": "Brook Properties 01 Ltd",
+        "premises_address": "722 Oak Street, Suite 2, Example City",
+        "tenant": "Juniper Studio 01 LLC"
+      },
+      "id": "train-f00-001",
+      "result": "explicit terms and null labels match PDF text"
+    },
+    {
+      "expected": {
+        "base_rent": {
+          "amount": 7511.5,
+          "currency": "EUR",
+          "period": "month"
+        },
+        "commencement_date": null,
+        "expiration_date": "2029-06-16",
+        "landlord": "Harbor Properties 810 Ltd",
+        "premises_address": "382 Oak Street, Suite 11, Example City",
+        "tenant": "Cedar Studio 810 LLC"
+      },
+      "id": "valid-f08-010",
+      "result": "explicit terms and null labels match PDF text"
+    }
+  ],
+  "method": "Independently read extracted PDF text and visually inspected train-f00-001 rendering; compared explicit terms with gold labels. Not a human legal review.",
+  "reviewed_by": "Codex"
+}

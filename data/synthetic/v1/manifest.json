@@ -1,0 +1,32 @@
+{
+  "counts": {
+    "test": 50,
+    "train": 200,
+    "valid": 50
+  },
+  "families": {
+    "test": [
+      "lease-family-10",
+      "lease-family-11"
+    ],
+    "train": [
+      "lease-family-00",
+      "lease-family-01",
+      "lease-family-02",
+      "lease-family-03",
+      "lease-family-04",
+      "lease-family-05",
+      "lease-family-06",
+      "lease-family-07"
+    ],
+    "valid": [
+      "lease-family-08",
+      "lease-family-09"
+    ]
+  },
+  "license": "Apache-2.0",
+  "scope": "synthetic educational leases; not a real-world benchmark",
+  "seed": 42,
+  "variant": "v1",
+  "version": "b4ab62189959686054b6d31469db1473c26eeee049119035c41a6a5d7ddd9abb"
+}

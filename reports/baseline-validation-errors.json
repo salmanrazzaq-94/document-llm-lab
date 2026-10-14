@@ -1,0 +1,11 @@
+{
+  "errors": [
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "valid-f08-000",
+      "predicted": "2026-03-04"
+    }
+  ],
+  "scope": "First10 validation examples only; inspected before designing v2; no test examples"
+}
