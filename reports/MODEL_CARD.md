@@ -57,6 +57,33 @@ fences, scored 75% there. Thus these runs improved synthetic/format compliance b
 demonstrate better real-document factual extraction. V1 dropped explicit written-month dates;
 v2 also produced a multi-object response. These are unresolved generalization failures.
 
+## V3 follow-up
+
+V3 uses the same base revision and LoRA settings, with 600 original synthetic training examples:
+400 broader leases and 200 original training examples for rehearsal. It has 100 new validation
+and 100 new test examples with separate template families. Training still uses the `original`
+prompt. Minimum full-validation completion loss selects the checkpoint at 139 completed updates.
+The run took 684.8 seconds with 4.43 GB peak MLX allocation.
+
+With the original prompt, v3 scores 99.375% fields / 100% schema validity on the new synthetic
+test, compared with 92.25% fields for the fence-normalized base model. On the original synthetic
+test, v3 scores 98.75% fields / 100% schema validity. On the original two real cases it regresses
+to 37.5% fields / 50% schema validity, despite recovering all four written-month dates. On three
+prospectively labeled additional real cases, it scores 54.17% fields / 66.7% schema validity;
+the base scores 29.17% fields / 33.3% schema validity there.
+
+An optional **inference-only** `careful` profile was designed after inspecting those real errors.
+With that profile, v3 reaches 75% on the original two and 58.33% on the other three, matching the
+equally prompted base model. V1 scores 50% and 25% under the same revised prompt. These are
+development/regression comparisons, not a new held-out test. V3 has no demonstrated real-document
+advantage over the equally prompted base model.
+
+The revised prompt also reduces v3's original synthetic test score to 92.5% fields / 94% schema
+validity. The default stays `original`; `careful` is an experimental option, not a universal
+improvement. Annotations are Codex-assisted and have not been independently human-adjudicated.
+All external texts remain evaluation-only. See [the full follow-up report](GENERALIZATION.md)
+for provenance, input-budget handling, errors, and remaining limitations.
+
 ## Limitations and failure modes
 
 - Training data is small, synthetic, and heavily templated. Related phrasing remains across splits.

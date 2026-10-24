@@ -1,0 +1,13 @@
+{
+  "selected_before_test_predictions_at": "2026-10-24T03:57:55.402579+00:00",
+  "selection": {
+    "iteration": 139,
+    "type": "validation",
+    "val_loss": 0.003559516742825508,
+    "val_time": 42.17040524998447
+  },
+  "adapter_sha256": "2233ca7793b56189d260b2aa7d6c96fd9506704c1c94476bcc3912440c6b5784",
+  "dataset_version": "81129f75ee18875a62f8004ef65170467c35f8f52a4e525c9c82925cf355f9b2",
+  "fresh_real_version": "09b1bd275cfc28d7aafd0d8131d6e0ae0575264f639d094766e612174b62e614",
+  "rule": "Minimum full synthetic validation completion loss; no real/test predictions used for selection."
+}

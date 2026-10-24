@@ -1,0 +1,1062 @@
+{
+  "baseline-new-test": {
+    "common_fence_cleanup": {
+      "metrics": {
+        "documents": 100,
+        "exact_document_accuracy": 0.6,
+        "field_accuracy": 0.9225,
+        "invalid_prediction_count": 2,
+        "median_seconds": 2.192193395982031,
+        "nonnull_field_accuracy": 0.9517426273458445,
+        "peak_memory_gb": 3.841200276,
+        "per_field_accuracy": {
+          "base_rent.amount": 0.98,
+          "base_rent.currency": 0.65,
+          "base_rent.period": 0.98,
+          "commencement_date": 0.86,
+          "expiration_date": 0.97,
+          "landlord": 0.98,
+          "premises_address": 0.98,
+          "tenant": 0.98
+        },
+        "schema_validity": 0.98,
+        "total_seconds": 223.1324668758316,
+        "unsupported_value_count": 46,
+        "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+        "unsupported_value_rate": 0.06084656084656084
+      },
+      "removed_fences": 22
+    },
+    "raw": {
+      "documents": 100,
+      "exact_document_accuracy": 0.46,
+      "field_accuracy": 0.7125,
+      "invalid_prediction_count": 24,
+      "median_seconds": 2.192193395982031,
+      "nonnull_field_accuracy": 0.7265415549597856,
+      "peak_memory_gb": 3.841200276,
+      "per_field_accuracy": {
+        "base_rent.amount": 0.76,
+        "base_rent.currency": 0.5,
+        "base_rent.period": 0.76,
+        "commencement_date": 0.65,
+        "expiration_date": 0.75,
+        "landlord": 0.76,
+        "premises_address": 0.76,
+        "tenant": 0.76
+      },
+      "schema_validity": 0.76,
+      "total_seconds": 223.1324668758316,
+      "unsupported_value_count": 38,
+      "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+      "unsupported_value_rate": 0.06551724137931035
+    }
+  },
+  "baseline-test": {
+    "common_fence_cleanup": {
+      "metrics": {
+        "documents": 50,
+        "exact_document_accuracy": 0.88,
+        "field_accuracy": 0.9675,
+        "invalid_prediction_count": 1,
+        "median_seconds": 2.3166218750047847,
+        "nonnull_field_accuracy": 0.9917582417582418,
+        "peak_memory_gb": 3.8381037,
+        "per_field_accuracy": {
+          "base_rent.amount": 0.98,
+          "base_rent.currency": 0.98,
+          "base_rent.period": 0.98,
+          "commencement_date": 0.88,
+          "expiration_date": 0.98,
+          "landlord": 0.98,
+          "premises_address": 0.98,
+          "tenant": 0.98
+        },
+        "schema_validity": 0.98,
+        "total_seconds": 144.93950141400273,
+        "unsupported_value_count": 5,
+        "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+        "unsupported_value_rate": 0.01366120218579235
+      },
+      "removed_fences": 17
+    },
+    "raw": {
+      "documents": 50,
+      "exact_document_accuracy": 0.58,
+      "field_accuracy": 0.6325,
+      "invalid_prediction_count": 18,
+      "median_seconds": 2.3166218750047847,
+      "nonnull_field_accuracy": 0.6318681318681318,
+      "peak_memory_gb": 3.8381037,
+      "per_field_accuracy": {
+        "base_rent.amount": 0.64,
+        "base_rent.currency": 0.64,
+        "base_rent.period": 0.64,
+        "commencement_date": 0.58,
+        "expiration_date": 0.64,
+        "landlord": 0.64,
+        "premises_address": 0.64,
+        "tenant": 0.64
+      },
+      "schema_validity": 0.64,
+      "total_seconds": 144.93950141400273,
+      "unsupported_value_count": 3,
+      "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+      "unsupported_value_rate": 0.012875536480686695
+    }
+  },
+  "careful-baseline-valid": {
+    "common_fence_cleanup": {
+      "metrics": {
+        "documents": 10,
+        "exact_document_accuracy": 0.4,
+        "field_accuracy": 0.825,
+        "invalid_prediction_count": 1,
+        "median_seconds": 2.0728350624849554,
+        "nonnull_field_accuracy": 0.863013698630137,
+        "peak_memory_gb": 3.841200276,
+        "per_field_accuracy": {
+          "base_rent.amount": 0.9,
+          "base_rent.currency": 0.6,
+          "base_rent.period": 0.9,
+          "commencement_date": 0.8,
+          "expiration_date": 0.9,
+          "landlord": 0.8,
+          "premises_address": 0.9,
+          "tenant": 0.8
+        },
+        "schema_validity": 0.9,
+        "total_seconds": 20.709949000913184,
+        "unsupported_value_count": 6,
+        "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+        "unsupported_value_rate": 0.08695652173913043
+      },
+      "removed_fences": 0
+    },
+    "raw": {
+      "documents": 10,
+      "exact_document_accuracy": 0.4,
+      "field_accuracy": 0.825,
+      "invalid_prediction_count": 1,
+      "median_seconds": 2.0728350624849554,
+      "nonnull_field_accuracy": 0.863013698630137,
+      "peak_memory_gb": 3.841200276,
+      "per_field_accuracy": {
+        "base_rent.amount": 0.9,
+        "base_rent.currency": 0.6,
+        "base_rent.period": 0.9,
+        "commencement_date": 0.8,
+        "expiration_date": 0.9,
+        "landlord": 0.8,
+        "premises_address": 0.9,
+        "tenant": 0.8
+      },
+      "schema_validity": 0.9,
+      "total_seconds": 20.709949000913184,
+      "unsupported_value_count": 6,
+      "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+      "unsupported_value_rate": 0.08695652173913043
+    }
+  },
+  "careful-fresh-baseline": {
+    "common_fence_cleanup": {
+      "metrics": {
+        "documents": 3,
+        "exact_document_accuracy": 0.0,
+        "field_accuracy": 0.5833333333333334,
+        "invalid_prediction_count": 1,
+        "median_seconds": 2.8088530000532046,
+        "nonnull_field_accuracy": 0.6086956521739131,
+        "peak_memory_gb": 4.211860056,
+        "per_field_accuracy": {
+          "base_rent.amount": 0.3333333333333333,
+          "base_rent.currency": 0.6666666666666666,
+          "base_rent.period": 0.6666666666666666,
+          "commencement_date": 0.6666666666666666,
+          "expiration_date": 0.6666666666666666,
+          "landlord": 0.3333333333333333,
+          "premises_address": 0.6666666666666666,
+          "tenant": 0.6666666666666666
+        },
+        "schema_validity": 0.6666666666666666,
+        "total_seconds": 8.75588570808759,
+        "unsupported_value_count": 2,
+        "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+        "unsupported_value_rate": 0.125
+      },
+      "removed_fences": 0
+    },
+    "raw": {
+      "documents": 3,
+      "exact_document_accuracy": 0.0,
+      "field_accuracy": 0.5833333333333334,
+      "invalid_prediction_count": 1,
+      "median_seconds": 2.8088530000532046,
+      "nonnull_field_accuracy": 0.6086956521739131,
+      "peak_memory_gb": 4.211860056,
+      "per_field_accuracy": {
+        "base_rent.amount": 0.3333333333333333,
+        "base_rent.currency": 0.6666666666666666,
+        "base_rent.period": 0.6666666666666666,
+        "commencement_date": 0.6666666666666666,
+        "expiration_date": 0.6666666666666666,
+        "landlord": 0.3333333333333333,
+        "premises_address": 0.6666666666666666,
+        "tenant": 0.6666666666666666
+      },
+      "schema_validity": 0.6666666666666666,
+      "total_seconds": 8.75588570808759,
+      "unsupported_value_count": 2,
+      "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+      "unsupported_value_rate": 0.125
+    }
+  },
+  "careful-fresh-v1": {
+    "common_fence_cleanup": {
+      "metrics": {
+        "documents": 3,
+        "exact_document_accuracy": 0.0,
+        "field_accuracy": 0.25,
+        "invalid_prediction_count": 1,
+        "median_seconds": 2.594371500017587,
+        "nonnull_field_accuracy": 0.2608695652173913,
+        "peak_memory_gb": 4.67079234,
+        "per_field_accuracy": {
+          "base_rent.amount": 0.3333333333333333,
+          "base_rent.currency": 0.6666666666666666,
+          "base_rent.period": 0.3333333333333333,
+          "commencement_date": 0.0,
+          "expiration_date": 0.0,
+          "landlord": 0.0,
+          "premises_address": 0.3333333333333333,
+          "tenant": 0.3333333333333333
+        },
+        "schema_validity": 0.6666666666666666,
+        "total_seconds": 8.146214873995632,
+        "unsupported_value_count": 6,
+        "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+        "unsupported_value_rate": 0.5
+      },
+      "removed_fences": 0
+    },
+    "raw": {
+      "documents": 3,
+      "exact_document_accuracy": 0.0,
+      "field_accuracy": 0.25,
+      "invalid_prediction_count": 1,
+      "median_seconds": 2.594371500017587,
+      "nonnull_field_accuracy": 0.2608695652173913,
+      "peak_memory_gb": 4.67079234,
+      "per_field_accuracy": {
+        "base_rent.amount": 0.3333333333333333,
+        "base_rent.currency": 0.6666666666666666,
+        "base_rent.period": 0.3333333333333333,
+        "commencement_date": 0.0,
+        "expiration_date": 0.0,
+        "landlord": 0.0,
+        "premises_address": 0.3333333333333333,
+        "tenant": 0.3333333333333333
+      },
+      "schema_validity": 0.6666666666666666,
+      "total_seconds": 8.146214873995632,
+      "unsupported_value_count": 6,
+      "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+      "unsupported_value_rate": 0.5
+    }
+  },
+  "careful-fresh-v3": {
+    "common_fence_cleanup": {
+      "metrics": {
+        "documents": 3,
+        "exact_document_accuracy": 0.0,
+        "field_accuracy": 0.5833333333333334,
+        "invalid_prediction_count": 1,
+        "median_seconds": 2.814402333984617,
+        "nonnull_field_accuracy": 0.6086956521739131,
+        "peak_memory_gb": 4.67079234,
+        "per_field_accuracy": {
+          "base_rent.amount": 0.3333333333333333,
+          "base_rent.currency": 0.6666666666666666,
+          "base_rent.period": 0.6666666666666666,
+          "commencement_date": 0.6666666666666666,
+          "expiration_date": 0.6666666666666666,
+          "landlord": 0.3333333333333333,
+          "premises_address": 0.6666666666666666,
+          "tenant": 0.6666666666666666
+        },
+        "schema_validity": 0.6666666666666666,
+        "total_seconds": 8.951314334000926,
+        "unsupported_value_count": 2,
+        "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+        "unsupported_value_rate": 0.125
+      },
+      "removed_fences": 0
+    },
+    "raw": {
+      "documents": 3,
+      "exact_document_accuracy": 0.0,
+      "field_accuracy": 0.5833333333333334,
+      "invalid_prediction_count": 1,
+      "median_seconds": 2.814402333984617,
+      "nonnull_field_accuracy": 0.6086956521739131,
+      "peak_memory_gb": 4.67079234,
+      "per_field_accuracy": {
+        "base_rent.amount": 0.3333333333333333,
+        "base_rent.currency": 0.6666666666666666,
+        "base_rent.period": 0.6666666666666666,
+        "commencement_date": 0.6666666666666666,
+        "expiration_date": 0.6666666666666666,
+        "landlord": 0.3333333333333333,
+        "premises_address": 0.6666666666666666,
+        "tenant": 0.6666666666666666
+      },
+      "schema_validity": 0.6666666666666666,
+      "total_seconds": 8.951314334000926,
+      "unsupported_value_count": 2,
+      "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+      "unsupported_value_rate": 0.125
+    }
+  },
+  "careful-real-baseline": {
+    "common_fence_cleanup": {
+      "metrics": {
+        "documents": 2,
+        "exact_document_accuracy": 0.0,
+        "field_accuracy": 0.75,
+        "invalid_prediction_count": 0,
+        "median_seconds": 2.7228624379786197,
+        "nonnull_field_accuracy": 0.8,
+        "peak_memory_gb": 4.02119708,
+        "per_field_accuracy": {
+          "base_rent.amount": 1.0,
+          "base_rent.currency": 0.5,
+          "base_rent.period": 1.0,
+          "commencement_date": 1.0,
+          "expiration_date": 1.0,
+          "landlord": 0.0,
+          "premises_address": 1.0,
+          "tenant": 0.5
+        },
+        "schema_validity": 1.0,
+        "total_seconds": 5.445724875957239,
+        "unsupported_value_count": 4,
+        "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+        "unsupported_value_rate": 0.25
+      },
+      "removed_fences": 0
+    },
+    "raw": {
+      "documents": 2,
+      "exact_document_accuracy": 0.0,
+      "field_accuracy": 0.75,
+      "invalid_prediction_count": 0,
+      "median_seconds": 2.7228624379786197,
+      "nonnull_field_accuracy": 0.8,
+      "peak_memory_gb": 4.02119708,
+      "per_field_accuracy": {
+        "base_rent.amount": 1.0,
+        "base_rent.currency": 0.5,
+        "base_rent.period": 1.0,
+        "commencement_date": 1.0,
+        "expiration_date": 1.0,
+        "landlord": 0.0,
+        "premises_address": 1.0,
+        "tenant": 0.5
+      },
+      "schema_validity": 1.0,
+      "total_seconds": 5.445724875957239,
+      "unsupported_value_count": 4,
+      "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+      "unsupported_value_rate": 0.25
+    }
+  },
+  "careful-real-v1": {
+    "common_fence_cleanup": {
+      "metrics": {
+        "documents": 2,
+        "exact_document_accuracy": 0.0,
+        "field_accuracy": 0.5,
+        "invalid_prediction_count": 0,
+        "median_seconds": 2.4288677080185153,
+        "nonnull_field_accuracy": 0.5333333333333333,
+        "peak_memory_gb": 4.669483196,
+        "per_field_accuracy": {
+          "base_rent.amount": 1.0,
+          "base_rent.currency": 0.5,
+          "base_rent.period": 1.0,
+          "commencement_date": 0.0,
+          "expiration_date": 0.0,
+          "landlord": 0.5,
+          "premises_address": 1.0,
+          "tenant": 0.0
+        },
+        "schema_validity": 1.0,
+        "total_seconds": 4.8577354160370305,
+        "unsupported_value_count": 4,
+        "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+        "unsupported_value_rate": 0.3333333333333333
+      },
+      "removed_fences": 0
+    },
+    "raw": {
+      "documents": 2,
+      "exact_document_accuracy": 0.0,
+      "field_accuracy": 0.5,
+      "invalid_prediction_count": 0,
+      "median_seconds": 2.4288677080185153,
+      "nonnull_field_accuracy": 0.5333333333333333,
+      "peak_memory_gb": 4.669483196,
+      "per_field_accuracy": {
+        "base_rent.amount": 1.0,
+        "base_rent.currency": 0.5,
+        "base_rent.period": 1.0,
+        "commencement_date": 0.0,
+        "expiration_date": 0.0,
+        "landlord": 0.5,
+        "premises_address": 1.0,
+        "tenant": 0.0
+      },
+      "schema_validity": 1.0,
+      "total_seconds": 4.8577354160370305,
+      "unsupported_value_count": 4,
+      "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+      "unsupported_value_rate": 0.3333333333333333
+    }
+  },
+  "careful-real-v3": {
+    "common_fence_cleanup": {
+      "metrics": {
+        "documents": 2,
+        "exact_document_accuracy": 0.0,
+        "field_accuracy": 0.75,
+        "invalid_prediction_count": 0,
+        "median_seconds": 2.7180661669990513,
+        "nonnull_field_accuracy": 0.8,
+        "peak_memory_gb": 4.669483196,
+        "per_field_accuracy": {
+          "base_rent.amount": 1.0,
+          "base_rent.currency": 0.5,
+          "base_rent.period": 1.0,
+          "commencement_date": 1.0,
+          "expiration_date": 1.0,
+          "landlord": 0.0,
+          "premises_address": 1.0,
+          "tenant": 0.5
+        },
+        "schema_validity": 1.0,
+        "total_seconds": 5.436132333998103,
+        "unsupported_value_count": 4,
+        "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+        "unsupported_value_rate": 0.25
+      },
+      "removed_fences": 0
+    },
+    "raw": {
+      "documents": 2,
+      "exact_document_accuracy": 0.0,
+      "field_accuracy": 0.75,
+      "invalid_prediction_count": 0,
+      "median_seconds": 2.7180661669990513,
+      "nonnull_field_accuracy": 0.8,
+      "peak_memory_gb": 4.669483196,
+      "per_field_accuracy": {
+        "base_rent.amount": 1.0,
+        "base_rent.currency": 0.5,
+        "base_rent.period": 1.0,
+        "commencement_date": 1.0,
+        "expiration_date": 1.0,
+        "landlord": 0.0,
+        "premises_address": 1.0,
+        "tenant": 0.5
+      },
+      "schema_validity": 1.0,
+      "total_seconds": 5.436132333998103,
+      "unsupported_value_count": 4,
+      "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+      "unsupported_value_rate": 0.25
+    }
+  },
+  "careful-v3-old-test": {
+    "common_fence_cleanup": {
+      "metrics": {
+        "documents": 50,
+        "exact_document_accuracy": 0.82,
+        "field_accuracy": 0.925,
+        "invalid_prediction_count": 3,
+        "median_seconds": 2.1619621250138152,
+        "nonnull_field_accuracy": 0.9505494505494505,
+        "peak_memory_gb": 4.348822948,
+        "per_field_accuracy": {
+          "base_rent.amount": 0.94,
+          "base_rent.currency": 0.94,
+          "base_rent.period": 0.94,
+          "commencement_date": 0.82,
+          "expiration_date": 0.94,
+          "landlord": 0.94,
+          "premises_address": 0.94,
+          "tenant": 0.94
+        },
+        "schema_validity": 0.94,
+        "total_seconds": 106.33505933388369,
+        "unsupported_value_count": 4,
+        "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+        "unsupported_value_rate": 0.011428571428571429
+      },
+      "removed_fences": 0
+    },
+    "raw": {
+      "documents": 50,
+      "exact_document_accuracy": 0.82,
+      "field_accuracy": 0.925,
+      "invalid_prediction_count": 3,
+      "median_seconds": 2.1619621250138152,
+      "nonnull_field_accuracy": 0.9505494505494505,
+      "peak_memory_gb": 4.348822948,
+      "per_field_accuracy": {
+        "base_rent.amount": 0.94,
+        "base_rent.currency": 0.94,
+        "base_rent.period": 0.94,
+        "commencement_date": 0.82,
+        "expiration_date": 0.94,
+        "landlord": 0.94,
+        "premises_address": 0.94,
+        "tenant": 0.94
+      },
+      "schema_validity": 0.94,
+      "total_seconds": 106.33505933388369,
+      "unsupported_value_count": 4,
+      "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+      "unsupported_value_rate": 0.011428571428571429
+    }
+  },
+  "careful-v3-valid": {
+    "common_fence_cleanup": {
+      "metrics": {
+        "documents": 10,
+        "exact_document_accuracy": 0.7,
+        "field_accuracy": 0.9625,
+        "invalid_prediction_count": 0,
+        "median_seconds": 2.084375208010897,
+        "nonnull_field_accuracy": 1.0,
+        "peak_memory_gb": 4.374745684,
+        "per_field_accuracy": {
+          "base_rent.amount": 1.0,
+          "base_rent.currency": 0.8,
+          "base_rent.period": 1.0,
+          "commencement_date": 0.9,
+          "expiration_date": 1.0,
+          "landlord": 1.0,
+          "premises_address": 1.0,
+          "tenant": 1.0
+        },
+        "schema_validity": 1.0,
+        "total_seconds": 20.72147274890449,
+        "unsupported_value_count": 3,
+        "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+        "unsupported_value_rate": 0.039473684210526314
+      },
+      "removed_fences": 0
+    },
+    "raw": {
+      "documents": 10,
+      "exact_document_accuracy": 0.7,
+      "field_accuracy": 0.9625,
+      "invalid_prediction_count": 0,
+      "median_seconds": 2.084375208010897,
+      "nonnull_field_accuracy": 1.0,
+      "peak_memory_gb": 4.374745684,
+      "per_field_accuracy": {
+        "base_rent.amount": 1.0,
+        "base_rent.currency": 0.8,
+        "base_rent.period": 1.0,
+        "commencement_date": 0.9,
+        "expiration_date": 1.0,
+        "landlord": 1.0,
+        "premises_address": 1.0,
+        "tenant": 1.0
+      },
+      "schema_validity": 1.0,
+      "total_seconds": 20.72147274890449,
+      "unsupported_value_count": 3,
+      "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+      "unsupported_value_rate": 0.039473684210526314
+    }
+  },
+  "fresh-baseline": {
+    "common_fence_cleanup": {
+      "metrics": {
+        "documents": 3,
+        "exact_document_accuracy": 0.0,
+        "field_accuracy": 0.2916666666666667,
+        "invalid_prediction_count": 2,
+        "median_seconds": 3.579924292047508,
+        "nonnull_field_accuracy": 0.30434782608695654,
+        "peak_memory_gb": 4.209107512,
+        "per_field_accuracy": {
+          "base_rent.amount": 0.3333333333333333,
+          "base_rent.currency": 0.3333333333333333,
+          "base_rent.period": 0.3333333333333333,
+          "commencement_date": 0.3333333333333333,
+          "expiration_date": 0.3333333333333333,
+          "landlord": 0.0,
+          "premises_address": 0.3333333333333333,
+          "tenant": 0.3333333333333333
+        },
+        "schema_validity": 0.3333333333333333,
+        "total_seconds": 10.633556001004763,
+        "unsupported_value_count": 1,
+        "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+        "unsupported_value_rate": 0.125
+      },
+      "removed_fences": 0
+    },
+    "raw": {
+      "documents": 3,
+      "exact_document_accuracy": 0.0,
+      "field_accuracy": 0.2916666666666667,
+      "invalid_prediction_count": 2,
+      "median_seconds": 3.579924292047508,
+      "nonnull_field_accuracy": 0.30434782608695654,
+      "peak_memory_gb": 4.209107512,
+      "per_field_accuracy": {
+        "base_rent.amount": 0.3333333333333333,
+        "base_rent.currency": 0.3333333333333333,
+        "base_rent.period": 0.3333333333333333,
+        "commencement_date": 0.3333333333333333,
+        "expiration_date": 0.3333333333333333,
+        "landlord": 0.0,
+        "premises_address": 0.3333333333333333,
+        "tenant": 0.3333333333333333
+      },
+      "schema_validity": 0.3333333333333333,
+      "total_seconds": 10.633556001004763,
+      "unsupported_value_count": 1,
+      "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+      "unsupported_value_rate": 0.125
+    }
+  },
+  "fresh-v1": {
+    "common_fence_cleanup": {
+      "metrics": {
+        "documents": 3,
+        "exact_document_accuracy": 0.0,
+        "field_accuracy": 0.2916666666666667,
+        "invalid_prediction_count": 1,
+        "median_seconds": 3.313878458982799,
+        "nonnull_field_accuracy": 0.30434782608695654,
+        "peak_memory_gb": 4.664517236,
+        "per_field_accuracy": {
+          "base_rent.amount": 0.3333333333333333,
+          "base_rent.currency": 0.3333333333333333,
+          "base_rent.period": 0.3333333333333333,
+          "commencement_date": 0.0,
+          "expiration_date": 0.3333333333333333,
+          "landlord": 0.0,
+          "premises_address": 0.6666666666666666,
+          "tenant": 0.3333333333333333
+        },
+        "schema_validity": 0.6666666666666666,
+        "total_seconds": 10.664116791973356,
+        "unsupported_value_count": 6,
+        "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+        "unsupported_value_rate": 0.46153846153846156
+      },
+      "removed_fences": 0
+    },
+    "raw": {
+      "documents": 3,
+      "exact_document_accuracy": 0.0,
+      "field_accuracy": 0.2916666666666667,
+      "invalid_prediction_count": 1,
+      "median_seconds": 3.313878458982799,
+      "nonnull_field_accuracy": 0.30434782608695654,
+      "peak_memory_gb": 4.664517236,
+      "per_field_accuracy": {
+        "base_rent.amount": 0.3333333333333333,
+        "base_rent.currency": 0.3333333333333333,
+        "base_rent.period": 0.3333333333333333,
+        "commencement_date": 0.0,
+        "expiration_date": 0.3333333333333333,
+        "landlord": 0.0,
+        "premises_address": 0.6666666666666666,
+        "tenant": 0.3333333333333333
+      },
+      "schema_validity": 0.6666666666666666,
+      "total_seconds": 10.664116791973356,
+      "unsupported_value_count": 6,
+      "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+      "unsupported_value_rate": 0.46153846153846156
+    }
+  },
+  "fresh-v3": {
+    "common_fence_cleanup": {
+      "metrics": {
+        "documents": 3,
+        "exact_document_accuracy": 0.0,
+        "field_accuracy": 0.5416666666666666,
+        "invalid_prediction_count": 1,
+        "median_seconds": 3.6416310420027003,
+        "nonnull_field_accuracy": 0.5652173913043478,
+        "peak_memory_gb": 4.664517236,
+        "per_field_accuracy": {
+          "base_rent.amount": 0.3333333333333333,
+          "base_rent.currency": 0.6666666666666666,
+          "base_rent.period": 0.3333333333333333,
+          "commencement_date": 0.6666666666666666,
+          "expiration_date": 0.6666666666666666,
+          "landlord": 0.3333333333333333,
+          "premises_address": 0.6666666666666666,
+          "tenant": 0.6666666666666666
+        },
+        "schema_validity": 0.6666666666666666,
+        "total_seconds": 11.504002749978099,
+        "unsupported_value_count": 3,
+        "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+        "unsupported_value_rate": 0.1875
+      },
+      "removed_fences": 0
+    },
+    "raw": {
+      "documents": 3,
+      "exact_document_accuracy": 0.0,
+      "field_accuracy": 0.5416666666666666,
+      "invalid_prediction_count": 1,
+      "median_seconds": 3.6416310420027003,
+      "nonnull_field_accuracy": 0.5652173913043478,
+      "peak_memory_gb": 4.664517236,
+      "per_field_accuracy": {
+        "base_rent.amount": 0.3333333333333333,
+        "base_rent.currency": 0.6666666666666666,
+        "base_rent.period": 0.3333333333333333,
+        "commencement_date": 0.6666666666666666,
+        "expiration_date": 0.6666666666666666,
+        "landlord": 0.3333333333333333,
+        "premises_address": 0.6666666666666666,
+        "tenant": 0.6666666666666666
+      },
+      "schema_validity": 0.6666666666666666,
+      "total_seconds": 11.504002749978099,
+      "unsupported_value_count": 3,
+      "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+      "unsupported_value_rate": 0.1875
+    }
+  },
+  "real-baseline": {
+    "common_fence_cleanup": {
+      "metrics": {
+        "documents": 2,
+        "exact_document_accuracy": 0.0,
+        "field_accuracy": 0.75,
+        "invalid_prediction_count": 0,
+        "median_seconds": 9.677904333504557,
+        "nonnull_field_accuracy": 0.8,
+        "peak_memory_gb": 4.017871096,
+        "per_field_accuracy": {
+          "base_rent.amount": 1.0,
+          "base_rent.currency": 0.5,
+          "base_rent.period": 1.0,
+          "commencement_date": 1.0,
+          "expiration_date": 1.0,
+          "landlord": 0.0,
+          "premises_address": 1.0,
+          "tenant": 0.5
+        },
+        "schema_validity": 1.0,
+        "total_seconds": 19.355808667009114,
+        "unsupported_value_count": 4,
+        "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+        "unsupported_value_rate": 0.25
+      },
+      "removed_fences": 2
+    },
+    "raw": {
+      "documents": 2,
+      "exact_document_accuracy": 0.0,
+      "field_accuracy": 0.0,
+      "invalid_prediction_count": 2,
+      "median_seconds": 9.677904333504557,
+      "nonnull_field_accuracy": 0.0,
+      "peak_memory_gb": 4.017871096,
+      "per_field_accuracy": {
+        "base_rent.amount": 0.0,
+        "base_rent.currency": 0.0,
+        "base_rent.period": 0.0,
+        "commencement_date": 0.0,
+        "expiration_date": 0.0,
+        "landlord": 0.0,
+        "premises_address": 0.0,
+        "tenant": 0.0
+      },
+      "schema_validity": 0.0,
+      "total_seconds": 19.355808667009114,
+      "unsupported_value_count": 0,
+      "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+      "unsupported_value_rate": 0
+    }
+  },
+  "real-v1": {
+    "common_fence_cleanup": {
+      "metrics": {
+        "documents": 2,
+        "exact_document_accuracy": 0.0,
+        "field_accuracy": 0.5,
+        "invalid_prediction_count": 0,
+        "median_seconds": 5.076436895498773,
+        "nonnull_field_accuracy": 0.5333333333333333,
+        "peak_memory_gb": 4.661455036,
+        "per_field_accuracy": {
+          "base_rent.amount": 1.0,
+          "base_rent.currency": 0.5,
+          "base_rent.period": 1.0,
+          "commencement_date": 0.0,
+          "expiration_date": 0.0,
+          "landlord": 0.5,
+          "premises_address": 1.0,
+          "tenant": 0.0
+        },
+        "schema_validity": 1.0,
+        "total_seconds": 10.152873790997546,
+        "unsupported_value_count": 4,
+        "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+        "unsupported_value_rate": 0.3333333333333333
+      },
+      "removed_fences": 0
+    },
+    "raw": {
+      "documents": 2,
+      "exact_document_accuracy": 0.0,
+      "field_accuracy": 0.5,
+      "invalid_prediction_count": 0,
+      "median_seconds": 5.076436895498773,
+      "nonnull_field_accuracy": 0.5333333333333333,
+      "peak_memory_gb": 4.661455036,
+      "per_field_accuracy": {
+        "base_rent.amount": 1.0,
+        "base_rent.currency": 0.5,
+        "base_rent.period": 1.0,
+        "commencement_date": 0.0,
+        "expiration_date": 0.0,
+        "landlord": 0.5,
+        "premises_address": 1.0,
+        "tenant": 0.0
+      },
+      "schema_validity": 1.0,
+      "total_seconds": 10.152873790997546,
+      "unsupported_value_count": 4,
+      "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+      "unsupported_value_rate": 0.3333333333333333
+    }
+  },
+  "real-v3": {
+    "common_fence_cleanup": {
+      "metrics": {
+        "documents": 2,
+        "exact_document_accuracy": 0.0,
+        "field_accuracy": 0.375,
+        "invalid_prediction_count": 1,
+        "median_seconds": 3.324709187494591,
+        "nonnull_field_accuracy": 0.3333333333333333,
+        "peak_memory_gb": 4.661455036,
+        "per_field_accuracy": {
+          "base_rent.amount": 0.5,
+          "base_rent.currency": 0.5,
+          "base_rent.period": 0.5,
+          "commencement_date": 0.5,
+          "expiration_date": 0.5,
+          "landlord": 0.0,
+          "premises_address": 0.5,
+          "tenant": 0.0
+        },
+        "schema_validity": 0.5,
+        "total_seconds": 6.649418374989182,
+        "unsupported_value_count": 2,
+        "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+        "unsupported_value_rate": 0.2857142857142857
+      },
+      "removed_fences": 0
+    },
+    "raw": {
+      "documents": 2,
+      "exact_document_accuracy": 0.0,
+      "field_accuracy": 0.375,
+      "invalid_prediction_count": 1,
+      "median_seconds": 3.324709187494591,
+      "nonnull_field_accuracy": 0.3333333333333333,
+      "peak_memory_gb": 4.661455036,
+      "per_field_accuracy": {
+        "base_rent.amount": 0.5,
+        "base_rent.currency": 0.5,
+        "base_rent.period": 0.5,
+        "commencement_date": 0.5,
+        "expiration_date": 0.5,
+        "landlord": 0.0,
+        "premises_address": 0.5,
+        "tenant": 0.0
+      },
+      "schema_validity": 0.5,
+      "total_seconds": 6.649418374989182,
+      "unsupported_value_count": 2,
+      "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+      "unsupported_value_rate": 0.2857142857142857
+    }
+  },
+  "v1-test": {
+    "common_fence_cleanup": {
+      "metrics": {
+        "documents": 50,
+        "exact_document_accuracy": 1.0,
+        "field_accuracy": 1.0,
+        "invalid_prediction_count": 0,
+        "median_seconds": 4.726232000000891,
+        "nonnull_field_accuracy": 1.0,
+        "peak_memory_gb": 4.132260652,
+        "per_field_accuracy": {
+          "base_rent.amount": 1.0,
+          "base_rent.currency": 1.0,
+          "base_rent.period": 1.0,
+          "commencement_date": 1.0,
+          "expiration_date": 1.0,
+          "landlord": 1.0,
+          "premises_address": 1.0,
+          "tenant": 1.0
+        },
+        "schema_validity": 1.0,
+        "total_seconds": 227.33065441496728,
+        "unsupported_value_count": 0,
+        "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+        "unsupported_value_rate": 0.0
+      },
+      "removed_fences": 0
+    },
+    "raw": {
+      "documents": 50,
+      "exact_document_accuracy": 1.0,
+      "field_accuracy": 1.0,
+      "invalid_prediction_count": 0,
+      "median_seconds": 4.726232000000891,
+      "nonnull_field_accuracy": 1.0,
+      "peak_memory_gb": 4.132260652,
+      "per_field_accuracy": {
+        "base_rent.amount": 1.0,
+        "base_rent.currency": 1.0,
+        "base_rent.period": 1.0,
+        "commencement_date": 1.0,
+        "expiration_date": 1.0,
+        "landlord": 1.0,
+        "premises_address": 1.0,
+        "tenant": 1.0
+      },
+      "schema_validity": 1.0,
+      "total_seconds": 227.33065441496728,
+      "unsupported_value_count": 0,
+      "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+      "unsupported_value_rate": 0.0
+    }
+  },
+  "v3-new-test": {
+    "common_fence_cleanup": {
+      "metrics": {
+        "documents": 100,
+        "exact_document_accuracy": 0.95,
+        "field_accuracy": 0.99375,
+        "invalid_prediction_count": 0,
+        "median_seconds": 2.7984252914902754,
+        "nonnull_field_accuracy": 0.9973190348525469,
+        "peak_memory_gb": 4.360283544,
+        "per_field_accuracy": {
+          "base_rent.amount": 1.0,
+          "base_rent.currency": 1.0,
+          "base_rent.period": 1.0,
+          "commencement_date": 0.97,
+          "expiration_date": 1.0,
+          "landlord": 1.0,
+          "premises_address": 1.0,
+          "tenant": 0.98
+        },
+        "schema_validity": 1.0,
+        "total_seconds": 273.63442171370843,
+        "unsupported_value_count": 5,
+        "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+        "unsupported_value_rate": 0.006675567423230975
+      },
+      "removed_fences": 0
+    },
+    "raw": {
+      "documents": 100,
+      "exact_document_accuracy": 0.95,
+      "field_accuracy": 0.99375,
+      "invalid_prediction_count": 0,
+      "median_seconds": 2.7984252914902754,
+      "nonnull_field_accuracy": 0.9973190348525469,
+      "peak_memory_gb": 4.360283544,
+      "per_field_accuracy": {
+        "base_rent.amount": 1.0,
+        "base_rent.currency": 1.0,
+        "base_rent.period": 1.0,
+        "commencement_date": 0.97,
+        "expiration_date": 1.0,
+        "landlord": 1.0,
+        "premises_address": 1.0,
+        "tenant": 0.98
+      },
+      "schema_validity": 1.0,
+      "total_seconds": 273.63442171370843,
+      "unsupported_value_count": 5,
+      "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+      "unsupported_value_rate": 0.006675567423230975
+    }
+  },
+  "v3-old-test": {
+    "common_fence_cleanup": {
+      "metrics": {
+        "documents": 50,
+        "exact_document_accuracy": 0.9,
+        "field_accuracy": 0.9875,
+        "invalid_prediction_count": 0,
+        "median_seconds": 2.2407226875366177,
+        "nonnull_field_accuracy": 0.9972527472527473,
+        "peak_memory_gb": 4.132260652,
+        "per_field_accuracy": {
+          "base_rent.amount": 1.0,
+          "base_rent.currency": 1.0,
+          "base_rent.period": 1.0,
+          "commencement_date": 0.9,
+          "expiration_date": 1.0,
+          "landlord": 1.0,
+          "premises_address": 1.0,
+          "tenant": 1.0
+        },
+        "schema_validity": 1.0,
+        "total_seconds": 110.87421887402888,
+        "unsupported_value_count": 4,
+        "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+        "unsupported_value_rate": 0.010899182561307902
+      },
+      "removed_fences": 0
+    },
+    "raw": {
+      "documents": 50,
+      "exact_document_accuracy": 0.9,
+      "field_accuracy": 0.9875,
+      "invalid_prediction_count": 0,
+      "median_seconds": 2.2407226875366177,
+      "nonnull_field_accuracy": 0.9972527472527473,
+      "peak_memory_gb": 4.132260652,
+      "per_field_accuracy": {
+        "base_rent.amount": 1.0,
+        "base_rent.currency": 1.0,
+        "base_rent.period": 1.0,
+        "commencement_date": 0.9,
+        "expiration_date": 1.0,
+        "landlord": 1.0,
+        "premises_address": 1.0,
+        "tenant": 1.0
+      },
+      "schema_validity": 1.0,
+      "total_seconds": 110.87421887402888,
+      "unsupported_value_count": 4,
+      "unsupported_value_definition": "Non-null predictions disagreeing with reviewed gold labels; not semantic entailment",
+      "unsupported_value_rate": 0.010899182561307902
+    }
+  }
+}

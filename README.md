@@ -166,6 +166,12 @@ The revised prompt was written after inspecting real-document errors. Its scores
 same documents are exploratory development results, not a new held-out test. Prompting gains
 must not be attributed to training. A new independent benchmark is needed before a broad claim.
 
+V3 reaches **99.375%** field accuracy on its broader synthetic test. With `careful`, it reaches
+**75% on the original two real leases**, improving over v1's 50% under the same prompt, but tying
+the equally prompted base model. Both score 58.33% on the other three real cases. The revised
+prompt also hurts the original synthetic regression test. See the
+[full generalization report](reports/GENERALIZATION.md) for the controls, tradeoffs, and failures.
+
 ## Tests and releases
 
 ```sh

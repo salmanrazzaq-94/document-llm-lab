@@ -1,0 +1,20 @@
+{
+  "adapter": null,
+  "dataset_version": "09b1bd275cfc28d7aafd0d8131d6e0ae0575264f639d094766e612174b62e614",
+  "generation": {
+    "enable_thinking": false,
+    "max_tokens": 384,
+    "temperature": 0.0
+  },
+  "ids": [
+    "aleasebert-84",
+    "aleasebert-166",
+    "aleasebert-201"
+  ],
+  "limit": null,
+  "model": "Qwen/Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "prompt_hash": "6129689f2de1d37ab59d86c7c2b704b95098d6b4b6b01d6f7b2912ff7efcab18",
+  "prompt_profile": "careful",
+  "split": "test"
+}

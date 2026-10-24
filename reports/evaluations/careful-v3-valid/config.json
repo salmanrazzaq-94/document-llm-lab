@@ -1,0 +1,28 @@
+{
+  "adapter": "artifacts/v3/best",
+  "adapter_sha256": "2233ca7793b56189d260b2aa7d6c96fd9506704c1c94476bcc3912440c6b5784",
+  "dataset_version": "81129f75ee18875a62f8004ef65170467c35f8f52a4e525c9c82925cf355f9b2",
+  "generation": {
+    "enable_thinking": false,
+    "max_tokens": 384,
+    "temperature": 0.0
+  },
+  "ids": [
+    "valid-f28-000",
+    "valid-f28-001",
+    "valid-f28-002",
+    "valid-f28-003",
+    "valid-f28-004",
+    "valid-f28-005",
+    "valid-f28-006",
+    "valid-f28-007",
+    "valid-f28-008",
+    "valid-f28-009"
+  ],
+  "limit": 10,
+  "model": "Qwen/Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "prompt_hash": "6129689f2de1d37ab59d86c7c2b704b95098d6b4b6b01d6f7b2912ff7efcab18",
+  "prompt_profile": "careful",
+  "split": "valid"
+}

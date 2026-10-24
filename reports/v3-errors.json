@@ -1,0 +1,1026 @@
+{
+  "errors": [
+    {
+      "error": "1 validation error for Lease\nbase_rent.period\n  Input should be 'month' or 'year' [type=literal_error, input_value='square meter', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/literal_error",
+      "id": "aleasebert-84",
+      "run": "fresh-baseline",
+      "type": "invalid-schema-after-common-fence-cleanup"
+    },
+    {
+      "expected": null,
+      "field": "landlord",
+      "id": "aleasebert-166",
+      "prediction": "China Electric Equipment Group Co., Ltd.",
+      "run": "fresh-baseline"
+    },
+    {
+      "error": "2 validation errors for Lease\nbase_rent.currency\n  String should match pattern '^[A-Z]{3}$' [type=string_pattern_mismatch, input_value='Yuan', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_pattern_mismatch\nbase_rent.period\n  Field required [type=missing, input_value={'amount': 1200000, 'currency': 'Yuan'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/missing",
+      "id": "aleasebert-201",
+      "run": "fresh-baseline",
+      "type": "invalid-schema-after-common-fence-cleanup"
+    },
+    {
+      "expected": "2011-01-01",
+      "field": "commencement_date",
+      "id": "aleasebert-84",
+      "prediction": null,
+      "run": "fresh-v1"
+    },
+    {
+      "expected": "Shantou Yunjia Fashion Clothing Co., Ltd.",
+      "field": "landlord",
+      "id": "aleasebert-84",
+      "prediction": "Shantou Yunjia Fashion Clothing Co., Ltd",
+      "run": "fresh-v1"
+    },
+    {
+      "expected": 72000.0,
+      "field": "base_rent.amount",
+      "id": "aleasebert-84",
+      "prediction": 4.0,
+      "run": "fresh-v1"
+    },
+    {
+      "expected": "CNY",
+      "field": "base_rent.currency",
+      "id": "aleasebert-84",
+      "prediction": "RMB",
+      "run": "fresh-v1"
+    },
+    {
+      "expected": "year",
+      "field": "base_rent.period",
+      "id": "aleasebert-84",
+      "prediction": "month",
+      "run": "fresh-v1"
+    },
+    {
+      "expected": "2007-04-01",
+      "field": "commencement_date",
+      "id": "aleasebert-166",
+      "prediction": null,
+      "run": "fresh-v1"
+    },
+    {
+      "expected": "2009-04-01",
+      "field": "expiration_date",
+      "id": "aleasebert-166",
+      "prediction": null,
+      "run": "fresh-v1"
+    },
+    {
+      "expected": null,
+      "field": "landlord",
+      "id": "aleasebert-166",
+      "prediction": "China Electric Equipment Group Co., Ltd",
+      "run": "fresh-v1"
+    },
+    {
+      "expected": "CEEG (Nanjing) PV-Tech Co., Ltd.",
+      "field": "tenant",
+      "id": "aleasebert-166",
+      "prediction": "CEEG (Nanjing) PV-Tech Co., Ltd",
+      "run": "fresh-v1"
+    },
+    {
+      "error": "1 validation error for Lease\nbase_rent.currency\n  String should match pattern '^[A-Z]{3}$' [type=string_pattern_mismatch, input_value='Yuan', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_pattern_mismatch",
+      "id": "aleasebert-201",
+      "run": "fresh-v1",
+      "type": "invalid-schema-after-common-fence-cleanup"
+    },
+    {
+      "error": "1 validation error for Lease\nbase_rent.period\n  Input should be 'month' or 'year' [type=literal_error, input_value='square meter', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/literal_error",
+      "id": "aleasebert-84",
+      "run": "fresh-v3",
+      "type": "invalid-schema-after-common-fence-cleanup"
+    },
+    {
+      "expected": null,
+      "field": "landlord",
+      "id": "aleasebert-166",
+      "prediction": "China Electric Equipment Group Co., Ltd.",
+      "run": "fresh-v3"
+    },
+    {
+      "expected": 100000.0,
+      "field": "base_rent.amount",
+      "id": "aleasebert-201",
+      "prediction": 1200000.0,
+      "run": "fresh-v3"
+    },
+    {
+      "expected": "month",
+      "field": "base_rent.period",
+      "id": "aleasebert-201",
+      "prediction": "year",
+      "run": "fresh-v3"
+    },
+    {
+      "expected": "Shantou Youbang International Express Supervise Center Co., Ltd",
+      "field": "landlord",
+      "id": "aleasebert-237",
+      "prediction": "Shantou Youbang International Express Supervise Center Co., Ltd.",
+      "run": "real-baseline"
+    },
+    {
+      "expected": "XU Shiyong",
+      "field": "landlord",
+      "id": "aleasebert-73",
+      "prediction": "Xingguo General Fruit Industry Development Co., Ltd.",
+      "run": "real-baseline"
+    },
+    {
+      "expected": "Xingguo General Fruit Industry Development Co., Ltd.",
+      "field": "tenant",
+      "id": "aleasebert-73",
+      "prediction": "XU Shiyong",
+      "run": "real-baseline"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "aleasebert-73",
+      "prediction": "CNY",
+      "run": "real-baseline"
+    },
+    {
+      "expected": "2012-10-01",
+      "field": "commencement_date",
+      "id": "aleasebert-237",
+      "prediction": null,
+      "run": "real-v1"
+    },
+    {
+      "expected": "2017-12-31",
+      "field": "expiration_date",
+      "id": "aleasebert-237",
+      "prediction": null,
+      "run": "real-v1"
+    },
+    {
+      "expected": "Big Tree International Co., Ltd.",
+      "field": "tenant",
+      "id": "aleasebert-237",
+      "prediction": "Big Tree International Co., Ltd",
+      "run": "real-v1"
+    },
+    {
+      "expected": "2011-03-01",
+      "field": "commencement_date",
+      "id": "aleasebert-73",
+      "prediction": null,
+      "run": "real-v1"
+    },
+    {
+      "expected": "2014-02-28",
+      "field": "expiration_date",
+      "id": "aleasebert-73",
+      "prediction": null,
+      "run": "real-v1"
+    },
+    {
+      "expected": "XU Shiyong",
+      "field": "landlord",
+      "id": "aleasebert-73",
+      "prediction": "Xingguo General Fruit Industry Development Co., Ltd",
+      "run": "real-v1"
+    },
+    {
+      "expected": "Xingguo General Fruit Industry Development Co., Ltd.",
+      "field": "tenant",
+      "id": "aleasebert-73",
+      "prediction": "XU Shiyong",
+      "run": "real-v1"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "aleasebert-73",
+      "prediction": "CNY",
+      "run": "real-v1"
+    },
+    {
+      "error": "1 validation error for Lease\ntenant\n  Field required [type=missing, input_value={'base_rent': {'amount': ...and 9, Longhu District'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/missing",
+      "id": "aleasebert-237",
+      "run": "real-v3",
+      "type": "invalid-schema-after-common-fence-cleanup"
+    },
+    {
+      "expected": "XU Shiyong",
+      "field": "landlord",
+      "id": "aleasebert-73",
+      "prediction": "Xingguo General Fruit Industry Development Co., Ltd.",
+      "run": "real-v3"
+    },
+    {
+      "expected": "Xingguo General Fruit Industry Development Co., Ltd.",
+      "field": "tenant",
+      "id": "aleasebert-73",
+      "prediction": "XU Shiyong",
+      "run": "real-v3"
+    },
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "test-f30-000",
+      "prediction": "2006-04-05",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": "CNY",
+      "field": "base_rent.currency",
+      "id": "test-f30-001",
+      "prediction": "RMB",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": "CNY",
+      "field": "base_rent.currency",
+      "id": "test-f30-002",
+      "prediction": "RMB",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": "CNY",
+      "field": "base_rent.currency",
+      "id": "test-f30-011",
+      "prediction": "RMB",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "test-f30-012",
+      "prediction": "USD",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "test-f30-017",
+      "prediction": "2020-04-05",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "test-f30-019",
+      "prediction": "JPY",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": "2013-07-10",
+      "field": "commencement_date",
+      "id": "test-f30-020",
+      "prediction": "2012-12-01",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "test-f30-020",
+      "prediction": "JPY",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "test-f30-024",
+      "prediction": "USD",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": "CNY",
+      "field": "base_rent.currency",
+      "id": "test-f30-025",
+      "prediction": "RMB",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "test-f30-032",
+      "prediction": "USD",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": "CNY",
+      "field": "base_rent.currency",
+      "id": "test-f30-033",
+      "prediction": "RMB",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "test-f30-034",
+      "prediction": "2004-04-05",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": "CNY",
+      "field": "base_rent.currency",
+      "id": "test-f30-034",
+      "prediction": "RMB",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": "1995-06-15",
+      "field": "commencement_date",
+      "id": "test-f30-035",
+      "prediction": "1994-12-01",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": "1999-03-02",
+      "field": "commencement_date",
+      "id": "test-f30-044",
+      "prediction": "2000-03-02",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "test-f30-044",
+      "prediction": "JPY",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "test-f30-048",
+      "prediction": "USD",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "test-f31-000",
+      "prediction": "2010-04-05",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": "1997-08-03",
+      "field": "expiration_date",
+      "id": "test-f31-001",
+      "prediction": "2007-08-03",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": "CNY",
+      "field": "base_rent.currency",
+      "id": "test-f31-002",
+      "prediction": "RMB",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "test-f31-004",
+      "prediction": "JPY",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "test-f31-006",
+      "prediction": "JPY",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": "1999-12-22",
+      "field": "commencement_date",
+      "id": "test-f31-009",
+      "prediction": "2003-12-22",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": "CNY",
+      "field": "base_rent.currency",
+      "id": "test-f31-009",
+      "prediction": "RMB",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "test-f31-011",
+      "prediction": "JPY",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "test-f31-015",
+      "prediction": "JPY",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": "1997-02-19",
+      "field": "commencement_date",
+      "id": "test-f31-016",
+      "prediction": "2002-02-19",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "test-f31-016",
+      "prediction": "JPY",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "test-f31-017",
+      "prediction": "2018-04-05",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": "CNY",
+      "field": "base_rent.currency",
+      "id": "test-f31-017",
+      "prediction": "RMB",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": "1999-12-20",
+      "field": "commencement_date",
+      "id": "test-f31-018",
+      "prediction": "2002-12-20",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": "CNY",
+      "field": "base_rent.currency",
+      "id": "test-f31-018",
+      "prediction": "RMB",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "test-f31-021",
+      "prediction": "JPY",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "test-f31-022",
+      "prediction": "JPY",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": "CNY",
+      "field": "base_rent.currency",
+      "id": "test-f31-028",
+      "prediction": "RMB",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "test-f31-031",
+      "prediction": "USD",
+      "run": "baseline-new-test"
+    },
+    {
+      "error": "3 validation errors for Lease\ncommencement_date\n  Value error, Dates must be unambiguous YYYY-MM-DD dates [type=value_error, input_value='14 May 1996', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error\nexpiration_date\n  Value error, Dates must be unambiguous YYYY-MM-DD dates [type=value_error, input_value='14 May 2000', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error\nbase_rent.currency\n  String should match pattern '^[A-Z]{3}$' [type=string_pattern_mismatch, input_value='pounds sterling', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_pattern_mismatch",
+      "id": "test-f31-032",
+      "run": "baseline-new-test",
+      "type": "invalid-schema-after-common-fence-cleanup"
+    },
+    {
+      "error": "1 validation error for Lease\ncommencement_date\n  Value error, Invalid isoformat string: '04/05/1998' [type=value_error, input_value='04/05/1998', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error",
+      "id": "test-f31-034",
+      "run": "baseline-new-test",
+      "type": "invalid-schema-after-common-fence-cleanup"
+    },
+    {
+      "expected": "CNY",
+      "field": "base_rent.currency",
+      "id": "test-f31-036",
+      "prediction": "RMB",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "test-f31-040",
+      "prediction": "JPY",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "test-f31-041",
+      "prediction": "USD",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "test-f31-042",
+      "prediction": "JPY",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "test-f31-045",
+      "prediction": "JPY",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": "CNY",
+      "field": "base_rent.currency",
+      "id": "test-f31-047",
+      "prediction": "RMB",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": "1996-07-22",
+      "field": "commencement_date",
+      "id": "test-f31-049",
+      "prediction": "2002-07-22",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "test-f31-049",
+      "prediction": "USD",
+      "run": "baseline-new-test"
+    },
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "test-f30-000",
+      "prediction": "2006-04-05",
+      "run": "v3-new-test"
+    },
+    {
+      "expected": "Elm Birch Trading Co., Ltd.",
+      "field": "tenant",
+      "id": "test-f30-014",
+      "prediction": "Elm Birch Co., Ltd.",
+      "run": "v3-new-test"
+    },
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "test-f30-017",
+      "prediction": "2020-04-05",
+      "run": "v3-new-test"
+    },
+    {
+      "expected": "River Birch Trading Co., Ltd.",
+      "field": "tenant",
+      "id": "test-f30-036",
+      "prediction": "River Birch Co., Ltd.",
+      "run": "v3-new-test"
+    },
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "test-f31-017",
+      "prediction": "2018-04-05",
+      "run": "v3-new-test"
+    },
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "test-f10-000",
+      "prediction": "2026-03-04",
+      "run": "baseline-test"
+    },
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "test-f10-010",
+      "prediction": "2026-03-04",
+      "run": "baseline-test"
+    },
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "test-f10-020",
+      "prediction": "2026-03-04",
+      "run": "baseline-test"
+    },
+    {
+      "error": "1 validation error for Lease\ncommencement_date\n  Value error, Invalid isoformat string: '03/04/2026' [type=value_error, input_value='03/04/2026', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error",
+      "id": "test-f11-000",
+      "run": "baseline-test",
+      "type": "invalid-schema-after-common-fence-cleanup"
+    },
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "test-f11-010",
+      "prediction": "2026-03-04",
+      "run": "baseline-test"
+    },
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "test-f11-020",
+      "prediction": "2026-03-04",
+      "run": "baseline-test"
+    },
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "test-f10-000",
+      "prediction": "2026-03-04",
+      "run": "v3-old-test"
+    },
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "test-f10-010",
+      "prediction": "2026-03-04",
+      "run": "v3-old-test"
+    },
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "test-f10-020",
+      "prediction": "2026-03-04",
+      "run": "v3-old-test"
+    },
+    {
+      "expected": "2026-02-06",
+      "field": "commencement_date",
+      "id": "test-f11-018",
+      "prediction": null,
+      "run": "v3-old-test"
+    },
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "test-f11-020",
+      "prediction": "2026-03-04",
+      "run": "v3-old-test"
+    },
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "valid-f28-000",
+      "prediction": "2029-04-05",
+      "run": "careful-v3-valid"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "valid-f28-001",
+      "prediction": "CNY",
+      "run": "careful-v3-valid"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "valid-f28-002",
+      "prediction": "CNY",
+      "run": "careful-v3-valid"
+    },
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "valid-f28-000",
+      "prediction": "2029-04-05",
+      "run": "careful-baseline-valid"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "valid-f28-001",
+      "prediction": "CNY",
+      "run": "careful-baseline-valid"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "valid-f28-002",
+      "prediction": "CNY",
+      "run": "careful-baseline-valid"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "valid-f28-003",
+      "prediction": "USD",
+      "run": "careful-baseline-valid"
+    },
+    {
+      "error": "2 validation errors for Lease\ncommencement_date\n  Value error, Dates must be unambiguous YYYY-MM-DD dates [type=value_error, input_value='18 February 1999', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error\nexpiration_date\n  Value error, Dates must be unambiguous YYYY-MM-DD dates [type=value_error, input_value='18 February 2005', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error",
+      "id": "valid-f28-007",
+      "run": "careful-baseline-valid",
+      "type": "invalid-schema-after-common-fence-cleanup"
+    },
+    {
+      "expected": "Alder Estates Limited",
+      "field": "landlord",
+      "id": "valid-f28-009",
+      "prediction": "West Birch Industries, Inc.",
+      "run": "careful-baseline-valid"
+    },
+    {
+      "expected": "West Birch Industries, Inc.",
+      "field": "tenant",
+      "id": "valid-f28-009",
+      "prediction": "Alder Estates Limited",
+      "run": "careful-baseline-valid"
+    },
+    {
+      "expected": "Shantou Youbang International Express Supervise Center Co., Ltd",
+      "field": "landlord",
+      "id": "aleasebert-237",
+      "prediction": "Shantou Youbang International Express Supervise Center Co., Ltd.",
+      "run": "careful-real-v3"
+    },
+    {
+      "expected": "XU Shiyong",
+      "field": "landlord",
+      "id": "aleasebert-73",
+      "prediction": "Xingguo General Fruit Industry Development Co., Ltd.",
+      "run": "careful-real-v3"
+    },
+    {
+      "expected": "Xingguo General Fruit Industry Development Co., Ltd.",
+      "field": "tenant",
+      "id": "aleasebert-73",
+      "prediction": "XU Shiyong",
+      "run": "careful-real-v3"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "aleasebert-73",
+      "prediction": "CNY",
+      "run": "careful-real-v3"
+    },
+    {
+      "expected": "Shantou Youbang International Express Supervise Center Co., Ltd",
+      "field": "landlord",
+      "id": "aleasebert-237",
+      "prediction": "Shantou Youbang International Express Supervise Center Co., Ltd.",
+      "run": "careful-real-baseline"
+    },
+    {
+      "expected": "XU Shiyong",
+      "field": "landlord",
+      "id": "aleasebert-73",
+      "prediction": "Xingguo General Fruit Industry Development Co., Ltd.",
+      "run": "careful-real-baseline"
+    },
+    {
+      "expected": "Xingguo General Fruit Industry Development Co., Ltd.",
+      "field": "tenant",
+      "id": "aleasebert-73",
+      "prediction": "XU Shiyong",
+      "run": "careful-real-baseline"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "aleasebert-73",
+      "prediction": "CNY",
+      "run": "careful-real-baseline"
+    },
+    {
+      "error": "1 validation error for Lease\nbase_rent.period\n  Input should be 'month' or 'year' [type=literal_error, input_value='square meter', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/literal_error",
+      "id": "aleasebert-84",
+      "run": "careful-fresh-v3",
+      "type": "invalid-schema-after-common-fence-cleanup"
+    },
+    {
+      "expected": null,
+      "field": "landlord",
+      "id": "aleasebert-166",
+      "prediction": "China Electric Equipment Group Co., Ltd.",
+      "run": "careful-fresh-v3"
+    },
+    {
+      "expected": 100000.0,
+      "field": "base_rent.amount",
+      "id": "aleasebert-201",
+      "prediction": 1200000.0,
+      "run": "careful-fresh-v3"
+    },
+    {
+      "error": "1 validation error for Lease\nbase_rent.period\n  Input should be 'month' or 'year' [type=literal_error, input_value='square meter', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/literal_error",
+      "id": "aleasebert-84",
+      "run": "careful-fresh-baseline",
+      "type": "invalid-schema-after-common-fence-cleanup"
+    },
+    {
+      "expected": null,
+      "field": "landlord",
+      "id": "aleasebert-166",
+      "prediction": "China Electric Equipment Group Co., Ltd.",
+      "run": "careful-fresh-baseline"
+    },
+    {
+      "expected": 100000.0,
+      "field": "base_rent.amount",
+      "id": "aleasebert-201",
+      "prediction": 1200000.0,
+      "run": "careful-fresh-baseline"
+    },
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "test-f10-000",
+      "prediction": "2026-03-04",
+      "run": "careful-v3-old-test"
+    },
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "test-f10-010",
+      "prediction": "2026-03-04",
+      "run": "careful-v3-old-test"
+    },
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "test-f10-020",
+      "prediction": "2026-03-04",
+      "run": "careful-v3-old-test"
+    },
+    {
+      "error": "Duplicate JSON key: premises_address",
+      "id": "test-f11-000",
+      "run": "careful-v3-old-test",
+      "type": "invalid-schema-after-common-fence-cleanup"
+    },
+    {
+      "expected": "2026-09-01",
+      "field": "commencement_date",
+      "id": "test-f11-001",
+      "prediction": null,
+      "run": "careful-v3-old-test"
+    },
+    {
+      "error": "Duplicate JSON key: commencement_date",
+      "id": "test-f11-007",
+      "run": "careful-v3-old-test",
+      "type": "invalid-schema-after-common-fence-cleanup"
+    },
+    {
+      "expected": "2026-02-06",
+      "field": "commencement_date",
+      "id": "test-f11-018",
+      "prediction": null,
+      "run": "careful-v3-old-test"
+    },
+    {
+      "expected": null,
+      "field": "commencement_date",
+      "id": "test-f11-020",
+      "prediction": "2026-03-04",
+      "run": "careful-v3-old-test"
+    },
+    {
+      "error": "Duplicate JSON key: commencement_date",
+      "id": "test-f11-024",
+      "run": "careful-v3-old-test",
+      "type": "invalid-schema-after-common-fence-cleanup"
+    },
+    {
+      "expected": "2012-10-01",
+      "field": "commencement_date",
+      "id": "aleasebert-237",
+      "prediction": null,
+      "run": "careful-real-v1"
+    },
+    {
+      "expected": "2017-12-31",
+      "field": "expiration_date",
+      "id": "aleasebert-237",
+      "prediction": null,
+      "run": "careful-real-v1"
+    },
+    {
+      "expected": "Big Tree International Co., Ltd.",
+      "field": "tenant",
+      "id": "aleasebert-237",
+      "prediction": "Big Tree International Co., Ltd",
+      "run": "careful-real-v1"
+    },
+    {
+      "expected": "2011-03-01",
+      "field": "commencement_date",
+      "id": "aleasebert-73",
+      "prediction": null,
+      "run": "careful-real-v1"
+    },
+    {
+      "expected": "2014-02-28",
+      "field": "expiration_date",
+      "id": "aleasebert-73",
+      "prediction": null,
+      "run": "careful-real-v1"
+    },
+    {
+      "expected": "XU Shiyong",
+      "field": "landlord",
+      "id": "aleasebert-73",
+      "prediction": "Xingguo General Fruit Industry Development Co., Ltd",
+      "run": "careful-real-v1"
+    },
+    {
+      "expected": "Xingguo General Fruit Industry Development Co., Ltd.",
+      "field": "tenant",
+      "id": "aleasebert-73",
+      "prediction": "XU Shiyong",
+      "run": "careful-real-v1"
+    },
+    {
+      "expected": null,
+      "field": "base_rent.currency",
+      "id": "aleasebert-73",
+      "prediction": "CNY",
+      "run": "careful-real-v1"
+    },
+    {
+      "expected": "2011-01-01",
+      "field": "commencement_date",
+      "id": "aleasebert-84",
+      "prediction": null,
+      "run": "careful-fresh-v1"
+    },
+    {
+      "expected": "2021-12-31",
+      "field": "expiration_date",
+      "id": "aleasebert-84",
+      "prediction": null,
+      "run": "careful-fresh-v1"
+    },
+    {
+      "expected": "Shantou Yunjia Fashion Clothing Co., Ltd.",
+      "field": "landlord",
+      "id": "aleasebert-84",
+      "prediction": "Shantou Yunjia Fashion Clothing Co., Ltd",
+      "run": "careful-fresh-v1"
+    },
+    {
+      "expected": "South Part 1, Nanshe Area, Pengnan Industrial Park on North Yingbinbei Road in Waisha Town of Longhu District in Shantou City",
+      "field": "premises_address",
+      "id": "aleasebert-84",
+      "prediction": "South Part 1, Nanshe Area, Pengnan Industrial Park, North Yingbinbei Road, Waisha Town, Longhu District, Shantou City",
+      "run": "careful-fresh-v1"
+    },
+    {
+      "expected": 72000.0,
+      "field": "base_rent.amount",
+      "id": "aleasebert-84",
+      "prediction": 4.0,
+      "run": "careful-fresh-v1"
+    },
+    {
+      "expected": "year",
+      "field": "base_rent.period",
+      "id": "aleasebert-84",
+      "prediction": "month",
+      "run": "careful-fresh-v1"
+    },
+    {
+      "expected": "2007-04-01",
+      "field": "commencement_date",
+      "id": "aleasebert-166",
+      "prediction": null,
+      "run": "careful-fresh-v1"
+    },
+    {
+      "expected": "2009-04-01",
+      "field": "expiration_date",
+      "id": "aleasebert-166",
+      "prediction": null,
+      "run": "careful-fresh-v1"
+    },
+    {
+      "expected": null,
+      "field": "landlord",
+      "id": "aleasebert-166",
+      "prediction": "China Electric Equipment Group Co., Ltd",
+      "run": "careful-fresh-v1"
+    },
+    {
+      "expected": "CEEG (Nanjing) PV-Tech Co., Ltd.",
+      "field": "tenant",
+      "id": "aleasebert-166",
+      "prediction": "CEEG (Nanjing) PV-Tech Co., Ltd",
+      "run": "careful-fresh-v1"
+    },
+    {
+      "error": "1 validation error for Lease\nuser\n  Extra inputs are not permitted [type=extra_forbidden, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden",
+      "id": "aleasebert-201",
+      "run": "careful-fresh-v1",
+      "type": "invalid-schema-after-common-fence-cleanup"
+    }
+  ],
+  "policy": "Same one-enclosing-Markdown-fence cleanup applied to all models for diagnostic factual comparisons. Primary parser/scores unchanged. All disagreements shown, including punctuation."
+}

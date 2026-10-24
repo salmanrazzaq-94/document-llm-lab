@@ -1,5 +1,8 @@
 # Local lease extraction experiments
 
+For the follow-up data-diversity and prompt experiments, see
+[Generalization experiment](GENERALIZATION.md). The original results below remain unchanged.
+
 Experiments completed on October 14, 2026, on an Apple M4 Pro with 48 GB RAM.
 All model training and inference ran locally, with no paid APIs or cloud GPU.
 The [model card](MODEL_CARD.md) records the exact base revision, training settings, scope, and licenses.

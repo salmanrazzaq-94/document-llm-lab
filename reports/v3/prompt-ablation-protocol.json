@@ -1,4 +1,5 @@
 {
+  "additional_control": "After base/v3 results, evaluated v1 with the unchanged careful prompt on the same five development/regression cases. No prompt, checkpoint or label edits followed. This separates the data intervention from prompting alone.",
   "defined_at": "2026-10-24T04:03:36.215278+00:00",
   "hypothesis": "Clarify required keys, transaction roles, whole-property rent and named currency without changing model weights, strict schema or scoring.",
   "limits": "All five real cases are development/regression cases for this ablation, because their original-prompt errors have been inspected. They are NOT a new held-out validation of the revised prompt. No claim that prompting gains come from LoRA.",
