@@ -149,6 +149,23 @@ predictions select a checkpoint. The [v3 hypothesis](reports/v3-hypothesis.json)
 protocol and dataset hashes before evaluation. See lesson 7 in the learning guide for why
 rehearsal, coverage, and a fresh check matter.
 
+An optional **inference-only** prompt ablation is available as `--prompt-profile careful`.
+It clarifies transaction roles, required keys, whole-property rent, and named currencies.
+Training and the default inference profile remain `original`. Configs record the selected
+profile and its prompt hash; `compare` refuses to compare different prompts.
+Apply the same profile to the baseline and adapter when measuring their difference:
+
+```sh
+uv run lease-lab evaluate --dataset data/real/benchmark --split test --prompt-profile careful --output artifacts/my-careful-baseline
+uv run lease-lab evaluate --dataset data/real/benchmark --split test --prompt-profile careful --adapter artifacts/my-v3/best --output artifacts/my-careful-v3
+uv run lease-lab compare artifacts/my-careful-baseline artifacts/my-careful-v3
+uv run lease-lab extract data/samples/train-f00-001.pdf --prompt-profile careful --adapter artifacts/my-v3/best --output artifacts/my-careful-extraction.json
+```
+
+The revised prompt was written after inspecting real-document errors. Its scores on those
+same documents are exploratory development results, not a new held-out test. Prompting gains
+must not be attributed to training. A new independent benchmark is needed before a broad claim.
+
 ## Tests and releases
 
 ```sh

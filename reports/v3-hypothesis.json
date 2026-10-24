@@ -1,7 +1,7 @@
 {
   "controls": "Same pinned base, non-thinking prompt, rank8 last8layers, batch1, learning_rate1e-4, seed42, 200steps, max_sequence2048, greedy384 tokens.",
   "dataset_version": "81129f75ee18875a62f8004ef65170467c35f8f52a4e525c9c82925cf355f9b2",
-  "fresh_real_version": "70c131292b42285fd1f9115c188e73d8fd617de7290887279dd834592d309add",
+  "fresh_real_version": "09b1bd275cfc28d7aafd0d8131d6e0ae0575264f639d094766e612174b62e614",
   "hypothesis": "Narrow ISO-date and explicit-role synthetic training caused lost date normalization and role attribution skills. Broader original examples plus rehearsal should improve them without changing parser, prompt, model or optimizer settings.",
   "limits": "Clause subpatterns and PDF renderer are shared across synthetic splits. Fresh real convenience sample remains very small and from the same corpus; case84 shares a corporate family with original237. No claim of broad generalization.",
   "planned_comparisons": [
@@ -10,5 +10,14 @@
     "original two real cases: development/regression",
     "three fresh real cases: one prospective check after selection"
   ],
+  "pre_prediction_reflow": {
+    "previous_version": "70c131292b42285fd1f9115c188e73d8fd617de7290887279dd834592d309add",
+    "prompt_tokens": {
+      "aleasebert-166": 1274,
+      "aleasebert-201": 1322,
+      "aleasebert-84": 1656
+    },
+    "reason": "Original78-character wrapping made case84 prompt1689 tokens, exceeding1664;90 characters still1675. Reflowed all fresh PDFs at105 characters without deleting text, changing labels, or changing any model setting. Completed before any fresh model predictions."
+  },
   "selection": "Minimum completion-only loss on all 100 v3 synthetic validation examples. No real labels in training; no fresh real predictions before locking the adapter."
 }

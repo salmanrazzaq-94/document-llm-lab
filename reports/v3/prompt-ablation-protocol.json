@@ -1,0 +1,7 @@
+{
+  "defined_at": "2026-10-24T04:03:36.215278+00:00",
+  "hypothesis": "Clarify required keys, transaction roles, whole-property rent and named currency without changing model weights, strict schema or scoring.",
+  "limits": "All five real cases are development/regression cases for this ablation, because their original-prompt errors have been inspected. They are NOT a new held-out validation of the revised prompt. No claim that prompting gains come from LoRA.",
+  "prompt_sha256": "5efb1cf5e55194d78a8fa0ad7ce4994f1cdb65b53a584e008f329ae9911ba3d2",
+  "selection": "One fixed prompt candidate. First sanity check the first10 synthetic validation cases with base and v3; then exploratory comparisons on the original2 and previously evaluated fresh3 real cases. No prompt search or further checkpoint selection."
+}

@@ -65,3 +65,21 @@ def test_inference_config_records_pinned_inputs_and_rejects_wrong_adapter_model(
     )
     with pytest.raises(ValueError, match="pinned model"):
         inference_config(adapter, pdf)
+
+
+def test_prompt_ablation_records_a_distinct_prompt_and_keeps_original_default():
+    from lease_lab.prompts import make_messages
+    from lease_lab.runtime import inference_config
+
+    original = inference_config()
+    careful = inference_config(prompt_profile="careful")
+    assert original["prompt_profile"] == "original"
+    assert original["prompt_hash"] != careful["prompt_hash"]
+    with pytest.raises(ValueError, match="prompt_hash"):
+        comparable_runs(
+            original | {"dataset_version": "same", "split": "test", "ids": ["same"]},
+            careful | {"dataset_version": "same", "split": "test", "ids": ["same"]},
+        )
+    messages = make_messages("Document", profile="careful")
+    assert "whole-property" in messages[0]["content"]
+    assert "ALL keys" in messages[0]["content"]

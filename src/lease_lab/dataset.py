@@ -89,16 +89,19 @@ def write_jsonl(path: Path, rows: list[dict]) -> None:
     path.write_text("".join(json.dumps(row, sort_keys=True) + "\n" for row in rows))
 
 
-def render_pdf(path: Path, paragraphs: list[str], family: int) -> None:
+def render_pdf(
+    path: Path, paragraphs: list[str], family: int, *, wrap_width: int | None = None
+) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     pdf = canvas.Canvas(str(path), invariant=1)
     pdf.setTitle("Synthetic educational lease")
     font = ["Helvetica", "Times-Roman", "Courier"][family % 3]
-    wrap_width = 78 if font != "Courier" else 70
+    default_wrap_width = 78 if font != "Courier" else 70
+    effective_wrap_width = default_wrap_width if wrap_width is None else wrap_width
     y = 750
     for paragraph in paragraphs:
         for line in paragraph.splitlines():
-            for wrapped in textwrap.wrap(line, width=wrap_width):
+            for wrapped in textwrap.wrap(line, width=effective_wrap_width):
                 if y < 65:
                     pdf.showPage()
                     y = 750

@@ -1,6 +1,15 @@
 {
   "findings": "Party A can be either tenant or landlord; written and abbreviated dates normalize correctly in labels; ambiguous yen symbol stays null; rate period remains monthly when collected quarterly; later rent and deposit are excluded. Rendered pages are legible without clipping.",
   "fresh_labels": "Cases84,166,201 independently read from the pinned archive and fixed before v3 predictions; all three selected before training. Source conflicts and rent-unit choices documented in each row.",
+  "fresh_reflow_audit": {
+    "checks": "Normalized extracted PDF text equals full normalized source HTML text for all three cases; every page character is within the right margin; case84 first page rendered and visually inspected. No gold labels changed.",
+    "prompt_tokens": {
+      "aleasebert-166": 1274,
+      "aleasebert-201": 1322,
+      "aleasebert-84": 1656
+    },
+    "reason": "Case84 over budget at78 and90 characters per line; reflow105 before any predictions."
+  },
   "method": "Read extracted PDF text against source facts and gold labels; rendered train-f21-004 and fresh real case166 page1 for visual inspection.",
   "prompt_token_range": [
     362,

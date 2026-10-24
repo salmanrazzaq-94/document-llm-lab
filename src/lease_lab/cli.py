@@ -5,6 +5,7 @@ from pathlib import Path
 from .dataset import build_dataset, write_json
 from .evaluation import score_predictions
 from .pdf import read_pdf
+from .prompts import PROMPT_PROFILES
 from .real_data import build_real_dataset
 from .runtime import (
     comparable_runs,
@@ -40,6 +41,7 @@ def main():
     evaluate.add_argument("--adapter", type=Path)
     evaluate.add_argument("--limit", type=int)
     evaluate.add_argument("--output", type=Path, required=True)
+    evaluate.add_argument("--prompt-profile", choices=PROMPT_PROFILES, default="original")
     train = commands.add_parser(
         "train", help="Train LoRA with completion-only loss and validation selection"
     )
@@ -51,6 +53,7 @@ def main():
     extract.add_argument("pdf", type=Path)
     extract.add_argument("--adapter", type=Path)
     extract.add_argument("--output", type=Path, required=True)
+    extract.add_argument("--prompt-profile", choices=PROMPT_PROFILES, default="original")
     score = commands.add_parser("score", help="Recompute metrics from saved predictions")
     score.add_argument("predictions", type=Path)
     compare = commands.add_parser(
@@ -68,15 +71,20 @@ def main():
             if args.limit is not None and args.limit < 1:
                 raise ValueError("--limit must be positive")
             result = evaluate_dataset(
-                args.dataset, args.split, args.output, args.adapter, args.limit
+                args.dataset,
+                args.split,
+                args.output,
+                args.adapter,
+                args.limit,
+                prompt_profile=args.prompt_profile,
             )
         elif args.command == "train":
             result = train_adapter(args.dataset, args.output, args.steps, args.learning_rate)
         elif args.command == "extract":
-            config = inference_config(args.adapter, args.pdf)
+            config = inference_config(args.adapter, args.pdf, prompt_profile=args.prompt_profile)
             text = read_pdf(args.pdf)
             model, tokenizer = load_local(args.adapter)
-            result = prediction(model, tokenizer, text)
+            result = prediction(model, tokenizer, text, prompt_profile=args.prompt_profile)
             result["config"] = config
             write_json(args.output, result)
             result["extraction"] = parse_prediction(result["output"]).model_dump()

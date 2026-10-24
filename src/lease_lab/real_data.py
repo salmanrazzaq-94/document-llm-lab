@@ -139,12 +139,14 @@ def build_real_dataset(root: Path, archive: Path | None = None, suite: str = "or
         raise ValueError("Real suite must be original or fresh")
     if suite == "original":
         cases = benchmark_cases()
+        pdf_wrap_width = None
         scope = (
             "Two real lease texts rendered as new PDFs. Tiny qualitative challenge set, not a "
             "representative benchmark. Evaluation only; excluded from all training."
         )
     else:
         cases = fresh_cases()
+        pdf_wrap_width = 105
         scope = (
             "Three prospectively labeled real leases, evaluation only. Selected for property-lease "
             "scope, explicit fixed rent and context fit before model predictions. Tiny convenience "
@@ -163,7 +165,8 @@ def build_real_dataset(root: Path, archive: Path | None = None, suite: str = "or
         for case in cases:
             paragraphs = source_text(source.read(case["archive_path"]).decode())
             pdf = f"pdfs/{case['id']}.pdf"
-            render_pdf(root / pdf, paragraphs, family=0)
+            # Reflow fresh documents with fewer artificial newlines; retain all text.
+            render_pdf(root / pdf, paragraphs, family=0, wrap_width=pdf_wrap_width)
             Lease.model_validate(case["expected"])
             rows.append(
                 {

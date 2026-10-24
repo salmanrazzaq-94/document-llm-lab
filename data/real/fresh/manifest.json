@@ -8,5 +8,5 @@
   "license_source": "https://uvaauas.figshare.com/articles/dataset/ALeaseBert/19732993",
   "scope": "Three prospectively labeled real leases, evaluation only. Selected for property-lease scope, explicit fixed rent and context fit before model predictions. Tiny convenience sample from the same corpus, not a representative or contamination-free benchmark. Original two cases are development/regression cases.",
   "source": "https://uvaauas.figshare.com/articles/dataset/ALeaseBert/19732993",
-  "version": "70c131292b42285fd1f9115c188e73d8fd617de7290887279dd834592d309add"
+  "version": "09b1bd275cfc28d7aafd0d8131d6e0ae0575264f639d094766e612174b62e614"
 }

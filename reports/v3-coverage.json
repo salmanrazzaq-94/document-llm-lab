@@ -1,0 +1,64 @@
+{
+  "test": {
+    "currency_kinds": {
+      "ambiguous": 24,
+      "iso": 26,
+      "named": 50
+    },
+    "date_styles": {
+      "abbreviated": 20,
+      "day_first": 20,
+      "iso": 20,
+      "month_first": 20,
+      "ordinal": 20
+    },
+    "documents": 100,
+    "indirect_roles": 100,
+    "missing_rent": 8,
+    "monthly_rate_quarterly_collection": 25,
+    "null_commencement": 6,
+    "null_expiration": 4
+  },
+  "train": {
+    "currency_kinds": {
+      "ambiguous": 88,
+      "iso": 88,
+      "named": 224,
+      "original_iso": 200
+    },
+    "date_styles": {
+      "abbreviated": 80,
+      "day_first": 80,
+      "iso": 80,
+      "month_first": 80,
+      "ordinal": 80,
+      "original_iso_or_ambiguous": 200
+    },
+    "documents": 600,
+    "indirect_roles": 300,
+    "missing_rent": 64,
+    "monthly_rate_quarterly_collection": 90,
+    "null_commencement": 48,
+    "null_expiration": 40
+  },
+  "valid": {
+    "currency_kinds": {
+      "ambiguous": 28,
+      "iso": 18,
+      "named": 54
+    },
+    "date_styles": {
+      "abbreviated": 20,
+      "day_first": 20,
+      "iso": 20,
+      "month_first": 20,
+      "ordinal": 20
+    },
+    "documents": 100,
+    "indirect_roles": 100,
+    "missing_rent": 8,
+    "monthly_rate_quarterly_collection": 25,
+    "null_commencement": 6,
+    "null_expiration": 4
+  }
+}

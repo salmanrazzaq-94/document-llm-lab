@@ -49,14 +49,17 @@ def read_jsonl(path: Path) -> list[dict]:
     return [json.loads(line) for line in path.read_text().splitlines() if line.strip()]
 
 
-def inference_config(adapter: Path | None = None, input_pdf: Path | None = None) -> dict:
+def inference_config(
+    adapter: Path | None = None, input_pdf: Path | None = None, *, prompt_profile: str = "original"
+) -> dict:
     config = {
         "model": MODEL,
         "model_revision": MODEL_REVISION,
         "generation": GENERATION,
         "prompt_hash": hashlib.sha256(
-            json.dumps(make_messages(""), sort_keys=True).encode()
+            json.dumps(make_messages("", profile=prompt_profile), sort_keys=True).encode()
         ).hexdigest(),
+        "prompt_profile": prompt_profile,
         "adapter": str(adapter) if adapter else None,
     }
     if input_pdf is not None:
@@ -88,13 +91,13 @@ def load_local(adapter: Path | None = None):
     return load(MODEL, revision=MODEL_REVISION, adapter_path=str(adapter) if adapter else None)
 
 
-def prediction(model, tokenizer, text: str) -> dict:
+def prediction(model, tokenizer, text: str, *, prompt_profile: str = "original") -> dict:
     import mlx.core as mx
     from mlx_lm import stream_generate
     from mlx_lm.sample_utils import make_sampler
 
     tokens = tokenizer.apply_chat_template(
-        make_messages(text),
+        make_messages(text, profile=prompt_profile),
         tokenize=True,
         add_generation_prompt=True,
         enable_thinking=False,
@@ -120,7 +123,13 @@ def prediction(model, tokenizer, text: str) -> dict:
 
 
 def evaluate_dataset(
-    dataset: Path, split: str, output: Path, adapter: Path | None = None, limit: int | None = None
+    dataset: Path,
+    split: str,
+    output: Path,
+    adapter: Path | None = None,
+    limit: int | None = None,
+    *,
+    prompt_profile: str = "original",
 ) -> dict:
     import mlx.core as mx
 
@@ -132,7 +141,7 @@ def evaluate_dataset(
     if not rows:
         raise ValueError("Evaluation needs at least one document")
     config = {
-        **inference_config(adapter),
+        **inference_config(adapter, prompt_profile=prompt_profile),
         "dataset_version": manifest["version"],
         "split": split,
         "ids": [r["id"] for r in rows],
@@ -147,7 +156,7 @@ def evaluate_dataset(
             id=row["id"],
             expected=row["expected"],
             text=row["text"],
-            **prediction(model, tokenizer, row["text"]),
+            **prediction(model, tokenizer, row["text"], prompt_profile=prompt_profile),
         )
         results.append(result)
         write_jsonl(output / "predictions.jsonl", results)

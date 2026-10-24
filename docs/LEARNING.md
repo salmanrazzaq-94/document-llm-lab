@@ -125,3 +125,25 @@ on them would justify further testing, not a claim that the model handles arbitr
 **Exercise:** Identify what stayed fixed, what changed, and what evidence would disprove the
 data-coverage hypothesis. Explain why lower validation loss and valid JSON are insufficient
 without examining the extracted facts on unfamiliar documents.
+
+## 8. Separate prompting from fine-tuning
+
+The v3 data experiment restores explicit written dates in the original real cases, but it
+also drops a required key and still reverses party roles. That is a partial result, not a fix.
+The optional `careful` inference profile tests clearer instructions without updating weights.
+The default `original` profile remains available to reproduce the training experiment.
+
+Compare the base model and adapter under **each identical prompt**, rather than comparing a
+poorly prompted base model with a carefully prompted adapter. An improved prompt may help the
+base model enough that fine-tuning is unnecessary for the desired quality. That is a useful
+engineering result even in a fine-tuning project.
+
+The revised prompt explicitly requires every key, distinguishes the property owner from its
+occupier, and separates whole-property rent from per-unit rates. It is a fixed candidate,
+not a prompt search. Because it was designed after reviewing the five real examples, those
+examples now serve as development/regression cases. They cannot validate generalization of
+the revised prompt, regardless of how good the scores become.
+
+**Exercise:** Explain how a schema-validity improvement can raise strict field accuracy without
+improving every extracted fact. Identify the next independent documents you would collect
+before choosing a default model and prompt for a real application.
