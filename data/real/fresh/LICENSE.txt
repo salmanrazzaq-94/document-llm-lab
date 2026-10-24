@@ -1,0 +1,6 @@
+Spyretta Leivaditi, Julien Rossi, Evangelos Kanoulas. A Benchmark for Lease Contract Review (2020); ALeaseBert dataset (2022). DOI: 10.21942/uva.19732993.v1
+Source: https://uvaauas.figshare.com/articles/dataset/ALeaseBert/19732993
+The dataset authors specify CC BY-NC 4.0 in their DATA/LICENSE description.
+https://creativecommons.org/licenses/by-nc/4.0/
+These documents retain that separate license; the repository Apache-2.0 license does not apply to them.
+Changes: HTML converted to PDF with line wrapping and normalized punctuation.

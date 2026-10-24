@@ -1,0 +1,16 @@
+{
+  "findings": "Party A can be either tenant or landlord; written and abbreviated dates normalize correctly in labels; ambiguous yen symbol stays null; rate period remains monthly when collected quarterly; later rent and deposit are excluded. Rendered pages are legible without clipping.",
+  "fresh_labels": "Cases84,166,201 independently read from the pinned archive and fixed before v3 predictions; all three selected before training. Source conflicts and rent-unit choices documented in each row.",
+  "method": "Read extracted PDF text against source facts and gold labels; rendered train-f21-004 and fresh real case166 page1 for visual inspection.",
+  "prompt_token_range": [
+    362,
+    436
+  ],
+  "reviewed_examples": [
+    "train-f20-001",
+    "train-f21-004",
+    "valid-f28-007",
+    "test-f30-009"
+  ],
+  "scope": "Spot audit, not exhaustive manual annotation review."
+}

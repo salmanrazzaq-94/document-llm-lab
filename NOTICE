@@ -7,5 +7,6 @@ Base model: https://huggingface.co/Qwen/Qwen3-1.7B
 MLX LM: https://github.com/ml-explore/mlx-lm (MIT)
 
 External ALeaseBert evaluation documents retain their separate CC BY-NC 4.0
-terms. See data/real/benchmark/LICENSE.txt and its manifest for attribution.
+terms. See data/real/benchmark/LICENSE.txt, data/real/fresh/LICENSE.txt,
+and their manifests for attribution.
 They are excluded from adapter training and from the Apache-2.0 data grant.

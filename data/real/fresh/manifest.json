@@ -1,0 +1,12 @@
+{
+  "archive_sha256": "eefd69346fda26223ade30c1d4eb2f8ad7088b03ea2660d56d6b6582da909250",
+  "attribution": "Spyretta Leivaditi, Julien Rossi, Evangelos Kanoulas. A Benchmark for Lease Contract Review (2020); ALeaseBert dataset (2022). DOI: 10.21942/uva.19732993.v1",
+  "counts": {
+    "test": 3
+  },
+  "license": "CC-BY-NC-4.0",
+  "license_source": "https://uvaauas.figshare.com/articles/dataset/ALeaseBert/19732993",
+  "scope": "Three prospectively labeled real leases, evaluation only. Selected for property-lease scope, explicit fixed rent and context fit before model predictions. Tiny convenience sample from the same corpus, not a representative or contamination-free benchmark. Original two cases are development/regression cases.",
+  "source": "https://uvaauas.figshare.com/articles/dataset/ALeaseBert/19732993",
+  "version": "70c131292b42285fd1f9115c188e73d8fd617de7290887279dd834592d309add"
+}

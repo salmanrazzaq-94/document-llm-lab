@@ -1,0 +1,40 @@
+{
+  "counts": {
+    "test": 100,
+    "train": 600,
+    "valid": 100
+  },
+  "families": {
+    "test": [
+      "diverse-lease-30",
+      "diverse-lease-31"
+    ],
+    "train": [
+      "diverse-lease-20",
+      "diverse-lease-21",
+      "diverse-lease-22",
+      "diverse-lease-23",
+      "diverse-lease-24",
+      "diverse-lease-25",
+      "diverse-lease-26",
+      "diverse-lease-27",
+      "lease-family-00",
+      "lease-family-01",
+      "lease-family-02",
+      "lease-family-03",
+      "lease-family-04",
+      "lease-family-05",
+      "lease-family-06",
+      "lease-family-07"
+    ],
+    "valid": [
+      "diverse-lease-28",
+      "diverse-lease-29"
+    ]
+  },
+  "license": "Apache-2.0",
+  "scope": "synthetic educational leases; not a real-world benchmark",
+  "seed": 42,
+  "variant": "v3",
+  "version": "81129f75ee18875a62f8004ef65170467c35f8f52a4e525c9c82925cf355f9b2"
+}

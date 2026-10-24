@@ -25,12 +25,13 @@ def main():
         "prepare", help="Generate reproducible original lease PDFs and labels"
     )
     prepare.add_argument("--output", type=Path, default=Path("data/generated/v1"))
-    prepare.add_argument("--variant", choices=["v1", "v2"], default="v1")
+    prepare.add_argument("--variant", choices=["v1", "v2", "v3"], default="v1")
     real = commands.add_parser(
         "prepare-real", help="Prepare the separate CC BY-NC external evaluation PDFs"
     )
     real.add_argument("--output", type=Path, default=Path("data/real/benchmark"))
     real.add_argument("--archive", type=Path, help="Optional already-downloaded pinned archive")
+    real.add_argument("--suite", choices=["original", "fresh"], default="original")
     evaluate = commands.add_parser(
         "evaluate", help="Evaluate baseline or adapter against one dataset split"
     )
@@ -62,7 +63,7 @@ def main():
         if args.command == "prepare":
             result = build_dataset(args.output, args.variant)
         elif args.command == "prepare-real":
-            result = build_real_dataset(args.output, args.archive)
+            result = build_real_dataset(args.output, args.archive, args.suite)
         elif args.command == "evaluate":
             if args.limit is not None and args.limit < 1:
                 raise ValueError("--limit must be positive")

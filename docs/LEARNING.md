@@ -95,3 +95,33 @@ They may get small floating-point differences on different hardware or library v
 For an interview, explain one actual failure, the evidence that identified its cause, the
 experiment you ran, and the measured result. Distinguish formatting improvements from factual
 accuracy and synthetic-template success from generalization to real contracts.
+
+## 7. Diagnose a generalization failure
+
+The first adapter scored 100% on its simple synthetic test but only 50% on two real leases.
+The original model scored 75% there after removing its Markdown fences. Read
+`reports/real-challenge-errors.json`: the adapter returned null for four explicit dates written
+with month names. Its training dates were all ISO strings or intentionally ambiguous numbers.
+This is evidence of a coverage gap and possible task-specific forgetting.
+
+V3 tests a data-diversity intervention. It includes written and abbreviated months, indirect
+party roles in both directions, punctuated company names, named currencies and ambiguous
+symbols, later rent increases, and monthly rates collected quarterly. It retains the original
+200 training examples as **rehearsal**, which gives the optimizer reminders of earlier behavior.
+It starts from the original model, rather than continuing v1. All training language is original
+synthetic material; external noncommercial contracts remain evaluation-only.
+
+The model, prompt, optimizer, rank, and update budget stay fixed. Changing several coverage
+dimensions together tests whether the broader dataset helps; it does not identify which
+individual dimension caused any gain. A later ablation could isolate that question.
+With 600 training rows and 200 batch-size-one steps, this run sees roughly one third of an epoch.
+Do not confuse a larger dataset with more training updates.
+
+Once inspected, the original two real cases are development/regression examples. Three newly
+annotated real leases form a prospective check, with labels fixed before model predictions.
+They are still a tiny sample from the same corpus, with related document styles. Better scores
+on them would justify further testing, not a claim that the model handles arbitrary leases.
+
+**Exercise:** Identify what stayed fixed, what changed, and what evidence would disprove the
+data-coverage hypothesis. Explain why lower validation loss and valid JSON are insufficient
+without examining the extracted facts on unfamiliar documents.

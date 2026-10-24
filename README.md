@@ -74,6 +74,11 @@ Inference reserves 384 output tokens within the 2,048-token introductory budget.
 
 v1 has **200 training, 50 validation, and 50 test** documents. Template-family IDs stay in
 one split. v2 keeps validation/test unchanged and adds 104 original training examples.
+v3 has **600 training, 100 validation, and 100 test** documents: 400 diverse original training
+leases plus the original 200 for rehearsal. Its new validation/test families cover written dates,
+indirect party roles, company punctuation, currency ambiguity, and rate versus collection period.
+The original v1 test set remains a separate regression check. Clause patterns and the PDF renderer
+still overlap across synthetic splits; family isolation does not make these independent real leases.
 Dataset content is hashed, and each split is verified against the manifest before use.
 The original synthetic text and labels are committed under `data/synthetic/v1/`;
 `prepare` regenerates all 300 PDFs under `data/generated/v1/`. Three samples are included.
@@ -112,6 +117,37 @@ These external materials retain **CC BY-NC 4.0**, as stated by the dataset autho
 Their attribution, source URLs, changes, checksum, and annotation notes are recorded beside them.
 They are separate from the repository's Apache-2.0 code and original synthetic data.
 Do not incorporate this noncommercial corpus into a permissively released training dataset.
+
+## Improve generalization with v3
+
+The original two real leases have now been inspected to guide the data-diversity experiment.
+Treat them as development/regression cases. Three additional real leases were labeled before
+v3 predictions for a prospective check; these remain a small convenience sample from the same
+corpus, with related styles and a shared corporate family in one case. All external text stays
+out of training. The model, extraction prompt, strict parser, and scoring rules are unchanged.
+
+```sh
+uv run lease-lab prepare --variant v3 --output data/generated/v3
+uv run lease-lab train --dataset data/generated/v3 --steps 20 --output artifacts/my-v3-smoke
+uv run lease-lab train --dataset data/generated/v3 --output artifacts/my-v3
+
+# Freeze the validation-selected adapter before checking either test set.
+uv run lease-lab evaluate --dataset data/generated/v3 --split test --output artifacts/my-v3-data-baseline
+uv run lease-lab evaluate --dataset data/generated/v3 --split test --adapter artifacts/my-v3/best --output artifacts/my-v3-test
+uv run lease-lab compare artifacts/my-v3-data-baseline artifacts/my-v3-test
+uv run lease-lab evaluate --dataset data/generated/v1 --split test --adapter artifacts/my-v3/best --output artifacts/my-v3-old-test
+
+# Fresh real check, using the same base and adapter prompts/settings.
+uv run lease-lab prepare-real --suite fresh --output data/real/fresh
+uv run lease-lab evaluate --dataset data/real/fresh --split test --output artifacts/my-fresh-baseline
+uv run lease-lab evaluate --dataset data/real/fresh --split test --adapter artifacts/my-v3/best --output artifacts/my-fresh-v3
+uv run lease-lab compare artifacts/my-fresh-baseline artifacts/my-fresh-v3
+```
+
+Validation loss covers all 100 v3 validation examples at each checkpoint. No real-lease
+predictions select a checkpoint. The [v3 hypothesis](reports/v3-hypothesis.json) records the
+protocol and dataset hashes before evaluation. See lesson 7 in the learning guide for why
+rehearsal, coverage, and a fresh check matter.
 
 ## Tests and releases
 

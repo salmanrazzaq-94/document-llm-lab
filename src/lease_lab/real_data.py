@@ -76,7 +76,81 @@ def benchmark_cases() -> list[dict]:
     ]
 
 
-def build_real_dataset(root: Path, archive: Path | None = None) -> dict:
+def fresh_cases() -> list[dict]:
+    """Prospective challenge: labels fixed before any v3 model predictions."""
+    return [
+        {
+            "id": "aleasebert-84",
+            "archive_path": "pool/a.7gwt0jast7_yYkZGNMh7zbFZZ8-lease_contract_84.plain.html",
+            "expected": {
+                "tenant": "Shantou Big Tree Toys Co., Ltd",
+                "landlord": "Shantou Yunjia Fashion Clothing Co., Ltd.",
+                "premises_address": "South Part 1, Nanshe Area, Pengnan Industrial Park on North Yingbinbei Road in Waisha Town of Longhu District in Shantou City",
+                "commencement_date": "2011-01-01",
+                "expiration_date": "2021-12-31",
+                "base_rent": {"amount": 72000.0, "currency": "CNY", "period": "year"},
+            },
+            "annotation_notes": "Use the explicit whole-property annual rent in RMB, not the monthly per-square-meter rate or parenthetical USD conversion. Keep the explicit dates even though the stated ten-year duration disagrees. This source shares a tenant corporate family with development case 237; not an independent-population sample.",
+            "evidence": {
+                "dates": "on January 1, 2011 and take back on December 31, 2021",
+                "rent": "The annual rent is RMB 72,000 (US $ 11,340)",
+            },
+        },
+        {
+            "id": "aleasebert-166",
+            "archive_path": "pool/azVMqwVBF_D9jfBlqAg989G2P4F4-lease_contract_166.plain.html",
+            "expected": {
+                "tenant": "CEEG (Nanjing) PV-Tech Co., Ltd.",
+                "landlord": None,
+                "premises_address": "No. 6 West Chengfou Road",
+                "commencement_date": "2007-04-01",
+                "expiration_date": "2009-04-01",
+                "base_rent": {"amount": 207360.0, "currency": "CNY", "period": "year"},
+            },
+            "annotation_notes": "Landlord is ambiguous: heading names China Electric Equipment Group Co., Ltd., signature names CEEG (Nanjing) Special Transformers Co., Ltd.; no precedence rule resolves this. Return null under the unchanged ambiguity policy. Rental is distinct from safety insurance and utilities. Do not calculate an aggregate monthly rate from the per-unit parenthesis.",
+            "evidence": {
+                "dates": "from April 1, 2007 to April 1, 2009",
+                "rent": "Rental is RMB 207,360 per year",
+                "landlord_conflict": "Lessor: China Electric Equipment Group Co., Ltd. / Lessor (seal): CEEG (Nanjing) Special Transformers Co., Ltd.",
+            },
+        },
+        {
+            "id": "aleasebert-201",
+            "archive_path": "pool/a0Xts4kMzdTGCoSkzyR4Ag3s93q0-lease_contract_201.plain.html",
+            "expected": {
+                "tenant": "Anhui Xuelingxian Pharmaceutical Co., Ltd.",
+                "landlord": "Bozhou Fengyi Chinese Medicine Development and Research Institute",
+                "premises_address": "East Liuge Village, Weiwu Road, Bozhou",
+                "commencement_date": "2008-08-01",
+                "expiration_date": "2023-07-31",
+                "base_rent": {"amount": 100000.0, "currency": "CNY", "period": "month"},
+            },
+            "annotation_notes": "Article 3 explicitly identifies 100000 Yuan as monthly rent; the preceding 1.2 million has no explicit period. Yuan names the currency; CNY is not inferred from location. Article 1 gives the property, not the representatives' names.",
+            "evidence": {
+                "dates": "from Aug 1, 2008 to July 31, 2023",
+                "rent": "pay 100000 Yuan to Party A before 15 of each month as the monthly rent",
+            },
+        },
+    ]
+
+
+def build_real_dataset(root: Path, archive: Path | None = None, suite: str = "original") -> dict:
+    if suite not in {"original", "fresh"}:
+        raise ValueError("Real suite must be original or fresh")
+    if suite == "original":
+        cases = benchmark_cases()
+        scope = (
+            "Two real lease texts rendered as new PDFs. Tiny qualitative challenge set, not a "
+            "representative benchmark. Evaluation only; excluded from all training."
+        )
+    else:
+        cases = fresh_cases()
+        scope = (
+            "Three prospectively labeled real leases, evaluation only. Selected for property-lease "
+            "scope, explicit fixed rent and context fit before model predictions. Tiny convenience "
+            "sample from the same corpus, not a representative or contamination-free benchmark. "
+            "Original two cases are development/regression cases."
+        )
     if archive:
         content = archive.read_bytes()
     else:
@@ -86,7 +160,7 @@ def build_real_dataset(root: Path, archive: Path | None = None) -> dict:
         raise ValueError("External archive changed; review it before changing the pinned checksum")
     rows = []
     with zipfile.ZipFile(io.BytesIO(content)) as source:
-        for case in benchmark_cases():
+        for case in cases:
             paragraphs = source_text(source.read(case["archive_path"]).decode())
             pdf = f"pdfs/{case['id']}.pdf"
             render_pdf(root / pdf, paragraphs, family=0)
@@ -116,7 +190,7 @@ def build_real_dataset(root: Path, archive: Path | None = None) -> dict:
         "license": "CC-BY-NC-4.0",
         "license_source": SOURCE,
         "attribution": ATTRIBUTION,
-        "scope": "Two real lease texts rendered as new PDFs. Tiny qualitative challenge set, not a representative benchmark. Evaluation only; excluded from all training.",
+        "scope": scope,
     }
     write_json(root / "manifest.json", manifest)
     (root / "LICENSE.txt").write_text(

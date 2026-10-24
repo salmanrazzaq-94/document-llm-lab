@@ -1,0 +1,14 @@
+{
+  "controls": "Same pinned base, non-thinking prompt, rank8 last8layers, batch1, learning_rate1e-4, seed42, 200steps, max_sequence2048, greedy384 tokens.",
+  "dataset_version": "81129f75ee18875a62f8004ef65170467c35f8f52a4e525c9c82925cf355f9b2",
+  "fresh_real_version": "70c131292b42285fd1f9115c188e73d8fd617de7290887279dd834592d309add",
+  "hypothesis": "Narrow ISO-date and explicit-role synthetic training caused lost date normalization and role attribution skills. Broader original examples plus rehearsal should improve them without changing parser, prompt, model or optimizer settings.",
+  "limits": "Clause subpatterns and PDF renderer are shared across synthetic splits. Fresh real convenience sample remains very small and from the same corpus; case84 shares a corporate family with original237. No claim of broad generalization.",
+  "planned_comparisons": [
+    "v3 held-out synthetic test",
+    "original v1 synthetic test regression",
+    "original two real cases: development/regression",
+    "three fresh real cases: one prospective check after selection"
+  ],
+  "selection": "Minimum completion-only loss on all 100 v3 synthetic validation examples. No real labels in training; no fresh real predictions before locking the adapter."
+}

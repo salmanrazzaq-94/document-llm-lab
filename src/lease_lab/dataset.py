@@ -176,20 +176,25 @@ def make_example(root: Path, split: str, family: int, index: int, hard: bool = F
 
 def build_dataset(root: Path, variant: str = "v1") -> dict:
     root = Path(root)
-    if variant not in {"v1", "v2"}:
-        raise ValueError("Dataset variant must be v1 or v2")
-    rows = [
-        make_example(root, split, family, index)
-        for split, families in FAMILIES.items()
-        for family in families
-        for index in range(25)
-    ]
-    if variant == "v2":
-        rows.extend(
-            make_example(root, "train", family, index, hard=True)
-            for family in FAMILIES["train"]
-            for index in range(25, 38)
-        )
+    if variant not in {"v1", "v2", "v3"}:
+        raise ValueError("Dataset variant must be v1, v2 or v3")
+    if variant == "v3":
+        from .diversity import v3_examples
+
+        rows = v3_examples(root)
+    else:
+        rows = [
+            make_example(root, split, family, index)
+            for split, families in FAMILIES.items()
+            for family in families
+            for index in range(25)
+        ]
+        if variant == "v2":
+            rows.extend(
+                make_example(root, "train", family, index, hard=True)
+                for family in FAMILIES["train"]
+                for index in range(25, 38)
+            )
     version = hashlib.sha256(json.dumps(rows, sort_keys=True).encode()).hexdigest()
     write_jsonl(root / "examples.jsonl", rows)
     for split in FAMILIES:
@@ -199,7 +204,7 @@ def build_dataset(root: Path, variant: str = "v1") -> dict:
         "variant": variant,
         "seed": 42,
         "counts": {s: sum(r["split"] == s for r in rows) for s in FAMILIES},
-        "families": {s: [f"lease-family-{f:02d}" for f in fs] for s, fs in FAMILIES.items()},
+        "families": {s: sorted({r["family"] for r in rows if r["split"] == s}) for s in FAMILIES},
         "license": "Apache-2.0",
         "scope": "synthetic educational leases; not a real-world benchmark",
     }
